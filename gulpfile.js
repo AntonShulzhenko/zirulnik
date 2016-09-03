@@ -84,7 +84,7 @@ gulp.task('browserSync', function() {
   })
 });
 
-gulp.task('default', ['build-css', 'jshint', 'build-js', 'useref', 'icons', 'images', 'fonts']);
+gulp.task('default', ['build-css', 'jshint', 'build-js', 'useref', 'icons', 'images', 'fonts', 'watch']);
 
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', ['browserSync', 'build-css', 'build-js'], function() {
