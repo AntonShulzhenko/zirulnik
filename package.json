@@ -1,0 +1,40 @@
+{
+  "name": "Zirulnik",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AntonShulzhenko/bsg-pack"
+  },
+  "author": "Anton Shulzhenko",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.14.3",
+    "cross-spawn": "^4.0.0",
+    "graceful-fs": "^4.1.6",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jshint": "^2.0.1",
+    "gulp-refresh": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.0",
+    "gulp-util": "^3.0.7",
+    "install": "^0.8.1",
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1",
+    "minimatch": "^3.0.3",
+    "npm": "^3.10.6",
+    "run-sequence": "^1.2.2"
+  }
+}
