@@ -1,7 +1,7 @@
 {
   "name": "Zirulnik",
   "version": "1.0.0",
-  "description": "",
+  "description": "Build for barbershop Zirulnik",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,6 +15,7 @@
   "devDependencies": {
     "browser-sync": "^2.14.3",
     "cross-spawn": "^4.0.0",
+    "del": "^2.2.2",
     "graceful-fs": "^4.1.6",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
@@ -30,6 +31,9 @@
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.0",
     "gulp-util": "^3.0.7",
+    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.0",
     "install": "^0.8.1",
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
