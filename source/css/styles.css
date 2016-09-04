@@ -7318,10 +7318,13 @@ button.close {
 }
 .form-btn {
   display: inline-block;
+  background-color: #600000;
+  border: none;
+  outline: none;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  background-color: #600000;
   color: #ffffff;
+  text-transform: uppercase;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
@@ -7329,6 +7332,13 @@ button.close {
   background-color: #ffffff;
   color: #600000;
   font-weight: 700;
+}
+
+.heading-1 {
+  font-family: "ChunkFive Ex";
+  font-size: 4.5rem;
+  line-height: 6.25rem;
+  color: #deb779;
 }
 
 html {
@@ -7346,6 +7356,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-color: #000202;
+  font-family: "PT Sans";
 }
 
 .main {
@@ -7650,11 +7661,200 @@ body {
   }
   .header__menu-btn i {
     margin-right: 0;
+    line-height: 50px;
+  }
+  .header__menu-btn span {
+    font-size: 0;
   }
   .header__register-btn {
     width: 150px;
   }
   .header__phone {
     margin-right: 10px;
+  }
+}
+.first-screen {
+  width: 100%;
+  height: calc(100vh - 50px);
+  padding-top: 120px;
+  background-color: #000202;
+  background-image: url(../img/bg1.jpg);
+  background-repeat: no-repeat;
+  background-position: center -100px;
+  position: relative;
+}
+.first-screen__h1 {
+  background-color: #000202;
+  margin-bottom: 3.75rem;
+}
+.first-screen__btn {
+  width: 400px;
+  height: 70px;
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  border-radius: 4px;
+  box-shadow: 0px 20px 10px -10px #000202;
+}
+.first-screen__slogan {
+  max-width: 416px;
+  float: left;
+  padding: 50px 20px;
+  background-color: #000202;
+  background-image: url(../img/i1.jpg);
+  background-repeat: no-repeat;
+  background-position: 40px 20px;
+  text-align: right;
+}
+.first-screen__slogan p {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: #ffffff;
+}
+.first-screen__alco {
+  text-align: right;
+  padding-right: 66px;
+  position: relative;
+  margin: 30px auto;
+}
+.first-screen__alco::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 50px;
+  background-image: url(../img/i-1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  -webkit-animation: alco 2s ease-in-out forwards infinite;
+          animation: alco 2s ease-in-out forwards infinite;
+}
+.first-screen__alco p {
+  font-family: "ChunkFive Ex";
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  color: #ffffff;
+}
+.first-screen__logo {
+  display: block;
+  width: 135px;
+  height: 135px;
+  background-image: url(../img/i-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@-webkit-keyframes alco {
+  0%, 100% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
+  }
+}
+
+@keyframes alco {
+  0%, 100% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
+  }
+}
+@media screen and (max-width: 1366px) {
+  .first-screen {
+    padding-top: 50px;
+    background-size: 500px;
+  }
+  .first-screen__h1 {
+    font-size: 3.375rem;
+    line-height: 4.6875rem;
+    margin-top: 6.25rem;
+    margin-bottom: 1.875rem;
+  }
+  .first-screen__slogan {
+    float: right;
+    padding: 50px 20px 50px 50px;
+    background-position: 20px top;
+  }
+  .first-screen__slogan p {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+  }
+  .first-screen__alco {
+    max-width: 400px;
+    float: right;
+    margin: 0 auto;
+  }
+  .first-screen__alco p {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .first-screen__h1 {
+    font-size: 3rem;
+    line-height: 3.375rem;
+    line-height: 4.375rem;
+    margin-top: 3.25rem;
+  }
+  .first-screen__slogan {
+    padding: 30px 20px 30px 60px;
+    background-position: 60px top;
+  }
+  .first-screen__alco {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .first-screen {
+    height: auto;
+    padding-bottom: 180px;
+    padding-top: 120px;
+  }
+  .first-screen .container {
+    width: 100%;
+  }
+  .first-screen__slogan {
+    max-width: 270px;
+    padding: 20px;
+    background-size: 50px;
+    background-position: left top;
+    float: left;
+  }
+  .first-screen__slogan p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .first-screen__alco {
+    margin-top: 20px;
+  }
+  .first-screen__btn {
+    width: 320px;
+    height: 60px;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .first-screen {
+    padding-bottom: 30px;
+  }
+  .first-screen__slogan {
+    float: none;
+    text-align: left;
+    background-image: none;
   }
 }

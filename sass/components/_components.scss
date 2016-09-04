@@ -1,8 +1,11 @@
 .form-btn {
   display: inline-block;
-  @include type-setting(-1);
   background-color: set-color('accent');
+  border: none;
+  outline: none;
+  @include type-setting(-1);
   color: set-color('white');
+  text-transform: uppercase;
   transition: all 200ms ease-in-out;
   &:hover,
   &:active {
@@ -10,4 +13,10 @@
     color: set-color('accent');
     font-weight: 700;
   }
+}
+
+.heading-1 {
+  font-family: $main-font;
+  @include type-setting(8);
+  color: set-color('gold');
 }

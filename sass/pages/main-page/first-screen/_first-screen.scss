@@ -1,0 +1,183 @@
+.first-screen {
+  width: 100%;
+  height: calc(100vh - 50px);
+  padding-top: 120px;
+  background: {
+    color: set-color('primary');
+    image: url(../img/bg1.jpg);
+    repeat: no-repeat;
+    position: center -100px;
+  }
+  position: relative;
+  &__h1 {
+    background-color: set-color('primary');
+    margin-bottom: 3.75rem;
+  }
+  &__btn {
+    width: 400px;
+    height: 70px;
+    @include type-setting(2);
+    border-radius: 4px;
+    box-shadow: 0px 20px 10px -10px rgba(0,2,2,1);
+  }
+  &__slogan {
+    max-width: 416px;
+    float: left;
+    padding: 50px 20px;
+    background: {
+      color: set-color('primary');
+      image: url(../img/i1.jpg);
+      repeat: no-repeat;
+      position: 40px 20px;
+    }
+    text-align: right;
+    p {
+      @include type-setting(3);
+      color: set-color('white');
+    }
+  }
+  &__alco {
+    text-align: right;
+    padding-right: 66px;
+    position: relative;
+    margin: 30px auto;
+    &::before {
+      content: "";
+      display: block;
+      width: 44px;
+      height: 50px;
+      background: {
+        image: url(../img/i-1.png);
+        repeat: no-repeat;
+        size: contain;
+        position: center;
+      }
+      position: absolute;
+      right: 0;
+      top: 10px;
+      animation: alco 2s ease-in-out forwards infinite;
+    }
+    p {
+      font-family: $main-font;
+      @include type-setting(2);
+      color: set-color('white');
+    }
+  }
+  &__logo {
+    display: block;
+    width: 135px;
+    height: 135px;
+    background: {
+      image: url(../img/i-2.png);
+      repeat: no-repeat;
+      position: center;
+      size: contain;
+    }
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes alco {
+  0%, 100% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(20deg);
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .first-screen {
+    padding-top: 50px;
+    background-size: 500px;
+    &__h1 {
+      @include type-setting(7);
+      margin-top: 6.25rem;
+      margin-bottom: 1.875rem;
+    }
+    &__slogan {
+      float: right;
+      padding: 50px 20px 50px 50px;
+      background: {
+        position: 20px top;
+      }
+      p {
+        @include type-setting(1);
+      }
+    }
+    &__alco {
+      max-width: 400px;
+      float: right;
+      margin: 0 auto;
+      p {
+        @include type-setting(1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .first-screen {
+    &__h1 {
+      @include type-setting(6);
+      line-height: 4.375rem;
+      margin-top: 3.25rem;
+    }
+    &__slogan {
+      padding: 30px 20px 30px 60px;
+      background: {
+        position: 60px top;
+      }
+    }
+    &__alco {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .first-screen {
+    height: auto;
+    padding-bottom: 180px;
+    padding-top: 120px;
+    .container {
+      width: 100%;
+    }
+    &__slogan {
+      max-width: 270px;
+      padding: 20px;
+      background: {
+        size: 50px;
+        position: left top;
+      }
+      float: left;
+      p {
+        @include type-setting(0);
+      }
+    }
+    &__alco {
+      margin-top: 20px;
+    }
+    &__btn {
+      width: 320px;
+      height: 60px;
+      @include type-setting(1);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .first-screen {
+    padding-bottom: 30px;
+    &__slogan {
+      float: none;
+      text-align: left;
+      background: {
+        image: none;
+      }
+    }
+  }
+}
