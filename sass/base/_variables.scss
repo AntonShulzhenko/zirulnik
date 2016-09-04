@@ -1,0 +1,40 @@
+// Colors
+$zirulnik-colors: (
+  'primary': #000202,
+  'accent': #600000,
+  'white': #ffffff,
+  'gold': #deb779,
+  'nav-bg': #2b2c31
+);
+
+// Typography
+$base-font-size: 1rem;
+$base-line-height: $base-font-size * 1.25;
+
+$type-scale: (
+  -2: 0.75rem,
+  -1: 0.875rem,
+  0: 1rem,
+  1: 1.125rem,
+  2: 1.375rem,
+  3: 1.5rem,
+  4: 1.875rem,
+  5: 2.25rem,
+  6: 3rem
+);
+
+$line-height: (
+  -1: $base-line-height,
+  0: $base-line-height,
+  1: $base-line-height * 1.5,
+  2: $base-line-height * 1.5,
+  3: $base-line-height * 1.5,
+  4: $base-line-height * 1.5,
+  5: $base-line-height * 1.5,
+  6: $base-line-height * 2.7
+);
+
+$main-font:    'ChunkFive Ex';
+$content-font: 'PT Sans';
+
+$max1280: max-width 1280px;

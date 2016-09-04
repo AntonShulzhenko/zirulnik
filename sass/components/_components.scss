@@ -1,0 +1,13 @@
+.form-btn {
+  display: inline-block;
+  @include type-setting(-1);
+  background-color: set-color('accent');
+  color: set-color('white');
+  transition: all 200ms ease-in-out;
+  &:hover,
+  &:active {
+    background-color: set-color('white');
+    color: set-color('accent');
+    font-weight: 700;
+  }
+}

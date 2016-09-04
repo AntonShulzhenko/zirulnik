@@ -1,0 +1,21 @@
+html {
+  min-width: 320px;
+  overflow-x: hidden;
+  width: 100%;
+  font-size: 16px;
+}
+
+body {
+  max-width: 1920px;
+  min-width: 320px;
+  height: 2000px;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: set-color('primary');
+}
+
+.main {
+  position: relative;
+  padding: 0 15px;
+}
