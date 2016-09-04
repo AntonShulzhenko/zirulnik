@@ -179,5 +179,25 @@
         image: none;
       }
     }
+    &__logo {
+      width: 100px;
+      height: 100px;
+    }
+    &__h1 {
+      font-size: 2rem;
+    }
+    &__alco {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .first-screen {
+    &__slogan {
+      max-width: 100%;
+      margin-left: -15px;
+      margin-right: -15px;;
+    }
   }
 }

@@ -7857,4 +7857,21 @@ body {
     text-align: left;
     background-image: none;
   }
+  .first-screen__logo {
+    width: 100px;
+    height: 100px;
+  }
+  .first-screen__h1 {
+    font-size: 2rem;
+  }
+  .first-screen__alco {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .first-screen__slogan {
+    max-width: 100%;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
