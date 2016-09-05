@@ -22,7 +22,8 @@ $type-scale: (
   5: 2.25rem,
   6: 3rem,
   7: 3.375rem,
-  8: 4.5rem
+  8: 4.5rem,
+  9: 3.75rem
 );
 
 $line-height: (
@@ -32,10 +33,11 @@ $line-height: (
   2: $base-line-height * 1.5,
   3: $base-line-height * 1.5,
   4: $base-line-height * 1.5,
-  5: $base-line-height * 1.5,
+  5: $base-line-height * 2.25,
   6: $base-line-height * 2.7,
   7: $base-line-height * 3.75,
-  8: $base-line-height * 5
+  8: $base-line-height * 5,
+  9: $base-line-height * 4.1
 );
 
 $main-font:    'ChunkFive Ex';

@@ -1,0 +1,69 @@
+.description {
+  background: {
+    image: url(../img/i8.jpg);
+    repeat: repeat;
+  }
+  padding: 120px 0 70px;
+  &__wrap {
+    max-width: 1110px;
+    margin: 0 auto;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: set-color('accent');
+      position: absolute;
+      left: 50%;
+      top: 0;
+    }
+  }
+  &__column {
+    max-width: 480px;
+    &_left {
+      float: right;
+    }
+    &_right {
+      img {
+        margin-top: 80px;
+        margin-bottom: 70px;
+      }
+    }
+  }
+  &__pr30 {
+    padding-right: 30px;
+  }
+  &__pl30 {
+    padding-left: 30px;
+  }
+  &__h2 {
+    @extend .heading-2;
+    color: set-color('accent');
+    margin-bottom: 100px;
+    margin-top: 0;
+    span {
+      font-size: type-scale(8);
+    }
+  }
+  &__lead {
+    margin-bottom: 0;
+    &_mb70 {
+      margin-bottom: 70px;
+    }
+    &_mt80 {
+      margin-top: 80px;
+    }
+  }
+  &__p {
+    @include type-setting(2);
+    color: set-color('primary');
+    margin-bottom: 0;
+    &_bold {
+      font-weight: 700;
+    }
+    &_mb35 {
+      margin-bottom: 30px;
+    }
+  }
+}

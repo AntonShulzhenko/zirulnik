@@ -20,3 +20,21 @@
   @include type-setting(8);
   color: set-color('gold');
 }
+
+.heading-2 {
+  font-family: $main-font;
+  @include type-setting(9);
+}
+
+.heading-3 {
+  font-family: $main-font;
+  @include type-setting(6);
+  color: set-color('white');
+  margin: 0 auto;
+}
+
+.lead {
+  font-family: $main-font;
+  @include type-setting(5);
+  color: set-color('primary');
+}
