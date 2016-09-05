@@ -7316,7 +7316,7 @@ button.close {
   font-weight: 700;
   font-style: italic;
 }
-.form-btn {
+.form-btn, .barber-school__btn {
   display: inline-block;
   background-color: #600000;
   border: none;
@@ -7328,7 +7328,7 @@ button.close {
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-.form-btn:hover, .form-btn:active {
+.form-btn:hover, .barber-school__btn:hover, .form-btn:active, .barber-school__btn:active {
   background-color: #ffffff;
   color: #600000;
   font-weight: 700;
@@ -8053,6 +8053,24 @@ body {
   height: 720px;
   width: 100%;
   position: relative;
+  overflow: hidden;
+}
+.services__action-label {
+  background-color: #600000;
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  color: #ffffff;
+  text-align: center;
+  width: 250px;
+  height: 125px;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  margin-left: -125px;
+  border-bottom-left-radius: 125px;
+  border-bottom-right-radius: 125px;
+  line-height: 145px;
+  z-index: 2;
 }
 
 .services-carousel {
@@ -8068,8 +8086,8 @@ body {
   -webkit-filter: grayscale(80%);
           filter: grayscale(80%);
   display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 .services-carousel__content {
   width: 100%;
@@ -8214,8 +8232,191 @@ body {
 
 .partners {
   background-color: #0e0e0e;
-  padding: 90px 0;
+  padding: 90px 0 60px;
 }
 .partners .heading-3 {
   margin-bottom: 110px;
+}
+.partners__wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.partners .mb30 {
+  margin-bottom: 30px;
+}
+.partners .ma {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slogans {
+  padding: 130px 0 95px;
+}
+
+.slogan-carousel {
+  position: relative;
+}
+.slogan-carousel__content {
+  background-color: #000202;
+  position: relative;
+  padding-top: 60px;
+  text-align: center;
+}
+.slogan-carousel__heading {
+  font-family: "ChunkFive Ex";
+  font-size: 4.5rem;
+  line-height: 6.25rem;
+  color: #ffffff;
+  width: 100%;
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.slogan-carousel__heading::after {
+  content: attr(data-sloagn);
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+.slogan-carousel__description {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: #ffffff;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.slogan-carousel .owl-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.slogan-carousel .owl-controls .owl-buttons {
+  color: #ffffff;
+  font-size: 100px;
+  line-height: 1;
+}
+.slogan-carousel .owl-controls .owl-buttons .owl-prev {
+  float: left;
+}
+.slogan-carousel .owl-controls .owl-buttons .owl-next {
+  float: right;
+}
+
+.barber-school {
+  background-image: url(../img/i12.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0 60px;
+}
+.barber-school__h2 {
+  font-family: "ChunkFive Ex";
+  font-size: 3.375rem;
+  line-height: 4.6875rem;
+  color: #600000;
+  margin-bottom: 30px;
+}
+.barber-school__slogan {
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  color: #000202;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.barber-school__h4 {
+  font-family: "ChunkFive Ex";
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  color: #000202;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.barber-school__list {
+  margin-bottom: 25px;
+  padding-left: 15px;
+}
+.barber-school__list li {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #000202;
+  margin-bottom: 5px;
+}
+.barber-school__btn {
+  width: 226px;
+  height: 60px;
+  letter-spacing: 1px;
+}
+.barber-school__contacts {
+  margin-top: 70px;
+  padding: 15px 60px;
+  border: 1px solid #000202;
+  font-family: "ChunkFive Ex";
+  color: #000202;
+  position: relative;
+}
+.barber-school__contacts-descr {
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+}
+.barber-school__phone {
+  font-size: 2.25rem;
+  line-height: 2.8125rem;
+  margin-top: 10px;
+}
+
+.franchise {
+  background-color: #000202;
+  padding: 85px 0 65px;
+  color: #ffffff;
+}
+.franchise__wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.franchise__card {
+  width: 100%;
+  height: 430px;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #700000;
+}
+.franchise__h2 {
+  font-family: "ChunkFive Ex";
+  font-size: 3.75rem;
+  line-height: 5.125rem;
+  position: relative;
+  top: -30px;
+}
+.franchise__h3 {
+  font-family: "ChunkFive Ex";
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  margin-bottom: 55px;
+  margin-top: 65px;
+}
+.franchise__p {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  margin-bottom: 55px;
+  margin-left: 45px;
+}
+.franchise__contacts {
+  font-family: "ChunkFive Ex";
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  margin-bottom: 0;
+  padding: 20px 30px;
+  width: 100%;
+  border: 1px solid #ffffff;
+}
+
+.contacts {
+  background-color: #000202;
+  padding: 65px 0 0;
+}
+.contacts__h3 {
+  margin-bottom: 25px;
 }

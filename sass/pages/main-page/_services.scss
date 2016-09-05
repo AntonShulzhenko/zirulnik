@@ -99,6 +99,23 @@
     height: 720px;
     width: 100%;
     position: relative;
+    overflow: hidden;
+  }
+  &__action-label {
+    background-color: set-color('accent');
+    @include type-setting(2);
+    color: set-color('white');
+    text-align: center;
+    width: 250px;
+    height: 125px;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    margin-left: -125px;
+    border-bottom-left-radius: 125px;
+    border-bottom-right-radius: 125px;
+    line-height: 145px;
+    z-index: 2;
   }
 }
 
@@ -113,8 +130,8 @@
   &__img {
     filter: grayscale(80%);
     display: block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
   }
   &__content {
     width: 100%;
