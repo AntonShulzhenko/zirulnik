@@ -1,0 +1,40 @@
+.footer {
+  padding-top: 20px;
+  background-color: set-color('primary');
+  &__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0 60px;
+    border-top: 1px solid set-color('accent');
+    border-bottom: 1px solid set-color('accent');
+  }
+  &__heading {
+    font-family: $main-font;
+    @include type-setting(4);
+    color: set-color('white');
+    margin-bottom: 20px;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 10px;
+      a {
+        @include type-setting(0);
+        color: set-color('white');
+      }
+    }
+  }
+  &__form {
+    width: 100%;
+  }
+  &__input {
+    width: 60%;
+    height: 50px;
+  }
+  &__btn {
+    width: 38%;
+    height: 50px;
+  }
+}

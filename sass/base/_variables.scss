@@ -1,10 +1,12 @@
 // Colors
 $zirulnik-colors: (
-  'primary': #000202,
-  'accent': #600000,
-  'white': #ffffff,
-  'gold': #deb779,
-  'nav-bg': #2b2c31
+  'primary'    : #000202,
+  'accent'     : #600000,
+  'white'      : #ffffff,
+  'gold'       : #deb779,
+  'nav-bg'     : #2b2c31,
+  'light-gray' : #d7d7d7,
+  'input-color': #838282
 );
 
 // Typography
@@ -32,7 +34,7 @@ $line-height: (
   1: $base-line-height * 1.5,
   2: $base-line-height * 1.5,
   3: $base-line-height * 1.5,
-  4: $base-line-height * 1.5,
+  4: $base-line-height * 1.8,
   5: $base-line-height * 2.25,
   6: $base-line-height * 2.7,
   7: $base-line-height * 3.75,

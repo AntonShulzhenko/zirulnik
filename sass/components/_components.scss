@@ -1,17 +1,42 @@
 .form-btn {
   display: inline-block;
   background-color: set-color('accent');
+  padding: 10px 20px;
   border: none;
   outline: none;
   @include type-setting(-1);
   color: set-color('white');
   text-transform: uppercase;
   transition: all 200ms ease-in-out;
+  vertical-align: middle;
   &:hover,
   &:active {
     background-color: set-color('white');
     color: set-color('accent');
     font-weight: 700;
+  }
+}
+
+.form-input {
+  padding: 10px 20px;
+  border: 1px solid set-color('light-gray');
+  border-radius: 0;
+  background-color: set-color('white');
+  @include type-setting(0);
+  color: set-color('primary');
+  outline: none;
+  vertical-align: middle;
+  &::-webkit-input-placeholder {
+    color: set-color('input-color');
+  }
+  &::-moz-placeholder          {
+    color: set-color('input-color');
+  }
+  &:-moz-placeholder           {
+    color: set-color('input-color');
+  }
+  &:-ms-input-placeholder      {
+    color: set-color('input-color');
   }
 }
 

@@ -17,5 +17,10 @@ body {
 
 .main {
   position: relative;
-  padding: 0 15px;
+  padding: 50px 15px 0;
+  opacity: 1;
+  transition: opacity 500ms cubic-bezier(0.6, 0, 0.4, 1);
+  &.trans {
+    opacity: 0.1;
+  }
 }
