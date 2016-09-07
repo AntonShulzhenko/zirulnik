@@ -1,7 +1,6 @@
-.main-nav {
+.slide-window {
   width: 100%;
   height: 100vh;
-  padding-top: 4.125rem;
   background-color: set-color('nav-bg');
   border: 15px solid set-color('primary');
   position: fixed;
@@ -13,7 +12,7 @@
   opacity: 0;
   transform: translate3d(0, -100vh, -200px);
   transition: all 800ms cubic-bezier(0.6, 0, 0.4, 1);
-  &.show {
+  &.slide {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
@@ -34,19 +33,6 @@
     padding-bottom: 0.5rem;
     border-bottom: 3px solid set-color('accent');
   }
-  &__list {
-    padding: 0;
-    margin-top: 2.5rem;
-    list-style: none;
-    li {
-      margin-bottom: 0.75rem;
-      a {
-        font-family: $main-font, serif;
-        @include type-setting(1);
-        color: set-color('white');
-      }
-    }
-  }
   &__close {
     width: 50px;
     height: 50px;
@@ -60,6 +46,34 @@
     line-height: 50px;
     color: set-color('white');
     text-align: center;
+  }
+}
+
+.main-nav {
+  display: none;
+  background-color: set-color('nav-bg');
+  width: 100%;
+  position: relative;
+  opacity: 0;
+  transition: all 300ms cubic-bezier(0.6, 0, 0.4, 1);
+  &.shown {
+    opacity: 1;
+  }
+  &.db {
+    display: block;
+  }
+  &__list {
+    padding: 0;
+    margin-top: 2.5rem;
+    list-style: none;
+    li {
+      margin-bottom: 0.75rem;
+      a {
+        font-family: $main-font, serif;
+        @include type-setting(1);
+        color: set-color('white');
+      }
+    }
   }
 }
 
