@@ -12,7 +12,7 @@
   right: 0;
   opacity: 0;
   transform: translate3d(0, -100vh, -200px);
-  transition: all 500ms cubic-bezier(0.6, 0, 0.4, 1);
+  transition: all 800ms cubic-bezier(0.6, 0, 0.4, 1);
   &.show {
     opacity: 1;
     transform: translate3d(0, 0, 0);
