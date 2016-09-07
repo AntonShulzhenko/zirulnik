@@ -37,4 +37,29 @@
     width: 38%;
     height: 50px;
   }
+  &__p {
+    @include type-setting(-1);
+    color: set-color('white');
+    margin-bottom: 20px;
+  }
+  &__name {
+    font-family: $main-font;
+    @include type-setting(1);
+    color: set-color('white');
+    margin: 30px auto;
+  }
+}
+
+.socials {
+  &__link {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: set-color('accent');
+    line-height: 26px;
+    color: set-color('white');
+    text-align: center;
+    margin: 25px 10px 35px 0;
+  }
 }

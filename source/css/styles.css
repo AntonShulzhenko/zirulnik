@@ -7790,6 +7790,31 @@ body {
   width: 38%;
   height: 50px;
 }
+.footer__p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer__name {
+  font-family: "ChunkFive Ex";
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: #ffffff;
+  margin: 30px auto;
+}
+
+.socials__link {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #600000;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: center;
+  margin: 25px 10px 35px 0;
+}
 
 .first-screen {
   width: 100%;
