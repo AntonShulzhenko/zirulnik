@@ -35,4 +35,14 @@ $( document ).ready(function() {
       $(this).find('.dropdown-toggle').removeClass('animated');
   });
 
+  var logoSm = $('.logo-sm');
+
+  $(window).on('scroll', function() {
+    if($(window).scrollTop() > 135) {
+      logoSm.css('opacity', 1);
+    } else {
+      logoSm.css('opacity', 0);
+    }
+  });
+
 });

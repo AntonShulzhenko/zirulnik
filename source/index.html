@@ -78,45 +78,49 @@
       <button class="main-nav__close"><i class="fa fa-times" aria-hidden="true"></i></button>
     </nav>
 
-    <header class="header clearfix">
-      <button class="header__menu-btn"><i class="fa fa-bars" aria-hidden="true"></i><span>Меню</span></button>
-
-      <div class="dropdown lang">
-        <button class="lang__btn dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-globe" aria-hidden="true"></i></button>
-        <div class="lang__langs-container dropdown-menu">
-          <a href="#" class="lang__langs">Ru</a>
-          <a href="#" class="lang__langs">Ua</a>
-          <a href="#" class="lang__langs">En</a>
-        </div>
-      </div>
-
-      <div class="dropdown location" id="location">
-        <button class="location__toggler dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-map-marker" aria-hidden="true"></i>Киев<i class="fa fa-angle-down" aria-hidden="true"></i></button>
-        <ul class="dropdown-menu location__drop-menu">
-          <li><a href="#">Бровары</a></li>
-        </ul>
-      </div>
-
-      <div class="dropdown location" id="address">
-        <button class="location__toggler location__toggler_address dropdown-toggle" type="button" data-toggle="dropdown">Шота Руставели 33-А<i class="fa fa-angle-down" aria-hidden="true"></i></button>
-        <ul class="dropdown-menu location__drop-menu">
-          <li><a href="#">Шота Руставели 33-А</a></li>
-          <li><a href="#">Шота Руставели 33-А</a></li>
-          <li><a href="#">Шота Руставели 33-А</a></li>
-        </ul>
-      </div>
-
-      <button class="header__register-btn form-btn">Записаться</button>
-
-      <div class="header__phones">
-        <p class="header__phone">+380 (44) 555-65-65</p>
-        <p class="header__phone">+380 (44) 555-65-65</p>
-      </div>
-    </header>
 
     <main class="main clearfix">
+      <header class="header clearfix">
+        <a href="#" class="logo-sm"></a>
+
+        <button class="header__menu-btn"><i class="fa fa-bars" aria-hidden="true"></i><span>Меню</span></button>
+
+        <div class="dropdown lang">
+          <button class="lang__btn dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-globe" aria-hidden="true"></i></button>
+          <div class="lang__langs-container dropdown-menu">
+            <a href="#" class="lang__langs">Ru</a>
+            <a href="#" class="lang__langs">Ua</a>
+            <a href="#" class="lang__langs">En</a>
+          </div>
+        </div>
+
+        <div class="dropdown location" id="location">
+          <button class="location__toggler dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-map-marker" aria-hidden="true"></i>Киев<i class="fa fa-angle-down" aria-hidden="true"></i></button>
+          <ul class="dropdown-menu location__drop-menu">
+            <li><a href="#">Бровары</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown location" id="address">
+          <button class="location__toggler location__toggler_address dropdown-toggle" type="button" data-toggle="dropdown">Шота Руставели 33-А<i class="fa fa-angle-down" aria-hidden="true"></i></button>
+          <ul class="dropdown-menu location__drop-menu">
+            <li><a href="#">Шота Руставели 33-А</a></li>
+            <li><a href="#">Шота Руставели 33-А</a></li>
+            <li><a href="#">Шота Руставели 33-А</a></li>
+          </ul>
+        </div>
+
+        <button class="header__register-btn form-btn">Записаться</button>
+
+        <div class="header__phones">
+          <p class="header__phone">+380 (44) 555-65-65</p>
+          <p class="header__phone">+380 (44) 555-65-65</p>
+        </div>
+      </header>
+      
+      <a href="#" class="main-logo"></a>
+
       <section class="first-screen text-center">
-        <a href="#" class="first-screen__logo"></a>
         <div class="container">
           <div class="row">
             <div class="col-sm-5 col-md-pull-1">
@@ -473,7 +477,7 @@
       <section class="contacts">
         <h3 class="heading-3 contacts__h3 text-center">Идеальную стрижку можно получить здесь</h3>
 
-        <div class="map-container"></div>
+        <div class="map-container" id="map" style="height: 500px;"></div>
       </section>
 
       <footer class="footer">
@@ -566,6 +570,8 @@
 
     <script src="js/main.js"></script>
 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUnvQtMtuaLF9EksV6y6jCPqIZh-fiDtw&callback=initMap"></script>
+
     <script>
       $(document).ready(function() {
 
@@ -608,6 +614,22 @@
             $(this).find('a').data('gallery');
         });
       });
+    </script>
+
+    <script>
+      var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 50.437088, lng: 30.518767},
+            zoom: 15,
+            styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+        });
+
+        var marker = new google.maps.Marker({
+          position: {lat: 50.437088, lng: 30.518767},
+          map: map
+        });
+      }
     </script>
   </body>
 </html>
