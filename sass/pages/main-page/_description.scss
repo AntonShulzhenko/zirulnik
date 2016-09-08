@@ -67,3 +67,122 @@
     }
   }
 }
+
+@media screen and (max-width: 1366px) {
+  .description {
+    padding-top: 70px;
+    &__wrap {
+      max-width: 850px;
+    }
+    &__h2 {
+      @include type-setting(6);
+      margin-bottom: 70px;
+      span {
+        font-size: type-scale(6);
+        margin-bottom: 10px;
+      }
+    }
+    &__lead {
+      @include type-setting(3);
+      &_mb70 {
+        margin-bottom: 60px;
+      }
+      &_mt80 {
+        max-width: 750px;
+        margin: 50px auto 0;
+      }
+    }
+    &__p {
+      @include type-setting(1);
+    }
+    &__column {
+      &_right img {
+        margin: 50px auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .description {
+    &__wrap {
+      max-width: 700px;
+    }
+    &__h2 {
+      @include type-setting(5);
+      margin-bottom: 50px;
+      span {
+        font-size: type-scale(5);
+        margin-bottom: 10px;
+      }
+    }
+    &__lead {
+      @include type-setting(2);
+      &_mb70 {
+        margin-bottom: 50px;
+      }
+      &_mt80 {
+        max-width: 750px;
+        margin: 50px auto 0;
+      }
+    }
+    &__p {
+      @include type-setting(0);
+    }
+    &__column {
+      &_right img {
+        margin: 30px auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .description {
+    padding-bottom: 30px;
+    &__wrap {
+      margin-bottom: 40px;
+      &::before {
+        display: none;
+      }
+    }
+    &__pr30 {
+      padding-right: 15px;
+      text-align: left;
+    }
+    &__pl30 {
+      padding-left: 15px;
+      text-align: left;
+    }
+    &__column {
+      img {
+        margin: 30px auto;
+      }
+      &_left,
+      &_right {
+        float: none;
+        margin: 0 auto;
+      }
+    }
+    &__h2 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    &__lead {
+      text-align: center;
+      margin: 40px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .description {
+    &__h2 {
+      @include type-setting(3);
+    }
+    &__lead {
+      @include type-setting(1);
+
+    }
+  }
+}

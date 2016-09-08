@@ -42,3 +42,32 @@
     border: 1px solid set-color('white');
   }
 }
+
+@media screen and (max-width: 1199px) {
+  .franchise {
+    padding: 60px 0;
+    &__wrap {
+      max-width: 900px;
+    }
+    &__h2 {
+      @include type-setting(6);
+    }
+    &__card {
+      height: 360px;
+    }
+    &__h3 {
+      @include type-setting(3);
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+    &__p {
+      margin-left: 30px;
+      margin-bottom: 40px;
+      @include type-setting(1);
+    }
+    &__contacts {
+      padding: 10px 20px;
+      @include type-setting(3);
+    }
+  }
+}

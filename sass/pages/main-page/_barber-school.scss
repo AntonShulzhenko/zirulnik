@@ -50,9 +50,62 @@
   }
   &__contacts-descr {
     @include type-setting(2);
+    margin-bottom: 0;
   }
   &__phone {
     @include type-setting(5);
     margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .barber-school {
+    padding-top: 60px;
+    &__h2 {
+      @include type-setting(6);
+    }
+    &__phone {
+      @include type-setting(4);
+    }
+    &__contacts-descr {
+      @include type-setting(1);
+    }
+    &__contacts {
+      padding: 10px 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .barber-school {
+    &__phone {
+      @include type-setting(2);
+      margin-top: 15px;
+    }
+    &__contacts-descr {
+      @include type-setting(0);
+    }
+    &__contacts {
+      padding: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .barber-school {
+    background-position: right center;
+    &__contacts-descr {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .barber-school {
+    &__h2 {
+      @include type-setting(5);
+    }
+
   }
 }

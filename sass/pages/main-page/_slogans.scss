@@ -50,3 +50,82 @@
     }
   }
 }
+
+@media screen and (max-width: 1366px) {
+  .slogans {
+    padding: 50px 0 70px;
+  }
+
+  .slogan-carousel {
+    max-width: 960px;
+    max-height: 720px;
+    margin: 0 auto;
+    &__heading {
+      @include type-setting(7);
+      top: -55px;
+    }
+    &__content {
+      padding-top: 30px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .slogan-carousel {
+    max-width: 750px;
+    max-height: 100%;
+    &__heading {
+      @include type-setting(5);
+      top: -35px;
+    }
+    &__description {
+      @include type-setting(0);
+    }
+    .owl-controls {
+      .owl-buttons {
+        font-size: 60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slogan-carousel {
+    &__heading {
+      @include type-setting(4);
+      top: -25px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slogan-carousel {
+    &__heading {
+      @include type-setting(3);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slogans {
+    padding-top: 0;
+  }
+  
+  .slogan-carousel {
+    &__heading {
+      margin-bottom: 20px;
+      position: relative;
+      top: 0;
+    }
+    &__content {
+      padding-top: 10px;
+    }
+    &__description {
+      max-width: 100%;
+    }
+    .owl-controls {
+      bottom: 60%;
+    }
+  }
+}

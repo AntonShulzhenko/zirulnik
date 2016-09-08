@@ -8,3 +8,19 @@
   overflow: hidden;
   margin-top: 50px;
 }
+
+@media screen and (max-width: 1366px) {
+  .gallery {
+    padding: 70px 0;
+  }
+
+  .heading-3 {
+    @include type-setting(5);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading-3 {
+    @include type-setting(4);
+  }
+}

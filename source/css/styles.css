@@ -8950,6 +8950,117 @@ body {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1366px) {
+  .description {
+    padding-top: 70px;
+  }
+  .description__wrap {
+    max-width: 850px;
+  }
+  .description__h2 {
+    font-size: 48px;
+    line-height: 54px;
+    margin-bottom: 70px;
+  }
+  .description__h2 span {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  .description__lead {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .description__lead_mb70 {
+    margin-bottom: 60px;
+  }
+  .description__lead_mt80 {
+    max-width: 750px;
+    margin: 50px auto 0;
+  }
+  .description__p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .description__column_right img {
+    margin: 50px auto;
+  }
+}
+@media screen and (max-width: 992px) {
+  .description__wrap {
+    max-width: 700px;
+  }
+  .description__h2 {
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 50px;
+  }
+  .description__h2 span {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .description__lead {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .description__lead_mb70 {
+    margin-bottom: 50px;
+  }
+  .description__lead_mt80 {
+    max-width: 750px;
+    margin: 50px auto 0;
+  }
+  .description__p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .description__column_right img {
+    margin: 30px auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .description {
+    padding-bottom: 30px;
+  }
+  .description__wrap {
+    margin-bottom: 40px;
+  }
+  .description__wrap::before {
+    display: none;
+  }
+  .description__pr30 {
+    padding-right: 15px;
+    text-align: left;
+  }
+  .description__pl30 {
+    padding-left: 15px;
+    text-align: left;
+  }
+  .description__column img {
+    margin: 30px auto;
+  }
+  .description__column_left, .description__column_right {
+    float: none;
+    margin: 0 auto;
+  }
+  .description__h2 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .description__lead {
+    text-align: center;
+    margin: 40px auto;
+  }
+}
+@media screen and (max-width: 420px) {
+  .description__h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .description__lead {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
 .gallery {
   margin: 0 -15px;
   padding: 100px 0;
@@ -8961,6 +9072,22 @@ body {
   margin-top: 50px;
 }
 
+@media screen and (max-width: 1366px) {
+  .gallery {
+    padding: 70px 0;
+  }
+
+  .heading-3 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .heading-3 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
 .partners {
   background-color: #000202;
   padding: 90px 0 60px;
@@ -8980,6 +9107,14 @@ body {
   margin-right: auto;
 }
 
+@media screen and (max-width: 1366px) {
+  .partners {
+    padding: 60px 0;
+  }
+  .partners .heading-3 {
+    margin-bottom: 60px;
+  }
+}
 .slogans {
   padding: 130px 0 95px;
 }
@@ -9035,6 +9170,76 @@ body {
   float: right;
 }
 
+@media screen and (max-width: 1366px) {
+  .slogans {
+    padding: 50px 0 70px;
+  }
+
+  .slogan-carousel {
+    max-width: 960px;
+    max-height: 720px;
+    margin: 0 auto;
+  }
+  .slogan-carousel__heading {
+    font-size: 54px;
+    line-height: 75px;
+    top: -55px;
+  }
+  .slogan-carousel__content {
+    padding-top: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slogan-carousel {
+    max-width: 750px;
+    max-height: 100%;
+  }
+  .slogan-carousel__heading {
+    font-size: 36px;
+    line-height: 45px;
+    top: -35px;
+  }
+  .slogan-carousel__description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .slogan-carousel .owl-controls .owl-buttons {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slogan-carousel__heading {
+    font-size: 30px;
+    line-height: 36px;
+    top: -25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .slogan-carousel__heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .slogans {
+    padding-top: 0;
+  }
+
+  .slogan-carousel__heading {
+    margin-bottom: 20px;
+    position: relative;
+    top: 0;
+  }
+  .slogan-carousel__content {
+    padding-top: 10px;
+  }
+  .slogan-carousel__description {
+    max-width: 100%;
+  }
+  .slogan-carousel .owl-controls {
+    bottom: 60%;
+  }
+}
 .barber-school {
   background-image: url(../img/i12.jpg);
   background-repeat: no-repeat;
@@ -9090,13 +9295,63 @@ body {
 .barber-school__contacts-descr {
   font-size: 22px;
   line-height: 30px;
+  margin-bottom: 0;
 }
 .barber-school__phone {
   font-size: 36px;
   line-height: 45px;
   margin-top: 10px;
+  margin-bottom: 0;
 }
 
+@media screen and (max-width: 1199px) {
+  .barber-school {
+    padding-top: 60px;
+  }
+  .barber-school__h2 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+  .barber-school__phone {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .barber-school__contacts-descr {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .barber-school__contacts {
+    padding: 10px 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .barber-school__phone {
+    font-size: 22px;
+    line-height: 30px;
+    margin-top: 15px;
+  }
+  .barber-school__contacts-descr {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .barber-school__contacts {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .barber-school {
+    background-position: right center;
+  }
+  .barber-school__contacts-descr {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .barber-school__h2 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
 .franchise {
   background-color: #000202;
   padding: 85px 0 65px;
@@ -9144,6 +9399,38 @@ body {
   border: 1px solid #ffffff;
 }
 
+@media screen and (max-width: 1199px) {
+  .franchise {
+    padding: 60px 0;
+  }
+  .franchise__wrap {
+    max-width: 900px;
+  }
+  .franchise__h2 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+  .franchise__card {
+    height: 360px;
+  }
+  .franchise__h3 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .franchise__p {
+    margin-left: 30px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .franchise__contacts {
+    padding: 10px 20px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
 .contacts {
   background-color: #000202;
   padding: 65px 0 0;
