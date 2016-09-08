@@ -248,6 +248,15 @@
       height: 50px;
     }
   }
+
+  .main-logo {
+    display: none;
+  }
+
+  .logo-sm {
+    display: block;
+    opacity: 1 !important;
+  }
 }
 
 @media screen and (max-width: 380px) {

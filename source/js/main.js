@@ -60,6 +60,31 @@ $( document ).ready(function() {
     }
   });
 
+  var header = $('.header');
+  var address = $('#address');
+  var location = $('#location .location__drop-menu');
+  var city = location.children();
+  var headerClose = $('.header__close');
+
+  console.log(city);
+
+  city.on('click', function() {
+    header.css('height', '102px');
+    address.addClass('db');
+    headerClose.addClass('db');
+
+    setTimeout(function() {
+      address.addClass('shown');
+      headerClose.addClass('shown');
+    }, 200);
+  });
+
+  headerClose.on('click', function() {
+    address.removeClass('db shown');
+    header.css('height', '50px');
+    $(this).removeClass('db shown');
+  });
+
 });
 
 
