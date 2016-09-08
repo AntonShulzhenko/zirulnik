@@ -73,3 +73,47 @@
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+  .footer {
+    &__heading {
+      @include type-setting(3);
+    }
+    &__list {
+      li {
+        a {
+          @include type-setting(-1);
+        }
+      }
+    }
+    &__form {
+      > * {
+        display: block;
+        width: 100%;
+        margin: 10px auto 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    &__inner {
+      padding: 0 0 30px;
+    }
+    &__heading {
+      margin-top: 30px;
+    }
+    &__form {
+      max-width: 320px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    &__input {
+      padding: 10px;
+    }
+  }
+}
