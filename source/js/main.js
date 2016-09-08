@@ -60,31 +60,40 @@ $( document ).ready(function() {
     }
   });
 
-  var header = $('.header');
-  var address = $('#address');
-  var location = $('#location .location__drop-menu');
-  var city = location.children();
-  var headerClose = $('.header__close');
+  function chooseLocation() {
+    var header = $('.header');
+    var address = $('#address');
+    var location = $('#location .location__drop-menu');
+    var city = location.children();
+    var headerClose = $('.header__close');
+    var locationBtnText = $('#location .location__toggler span');
 
-  console.log(city);
+    city.on('click', function(e) {
+      e.preventDefault();
+      locationBtnText.text($(this).text());
+    });
 
-  city.on('click', function() {
-    header.css('height', '102px');
-    address.addClass('db');
-    headerClose.addClass('db');
+    if ($(window).width() < 768) {
+      city.on('click', function() {
+        header.css('height', '102px');
+        address.addClass('db');
+        headerClose.addClass('db');
 
-    setTimeout(function() {
-      address.addClass('shown');
-      headerClose.addClass('shown');
-    }, 200);
-  });
+        setTimeout(function() {
+          address.addClass('shown');
+          headerClose.addClass('shown');
+        }, 200);
+      });
 
-  headerClose.on('click', function() {
-    address.removeClass('db shown');
-    header.css('height', '50px');
-    $(this).removeClass('db shown');
-  });
+      headerClose.on('click', function() {
+        address.removeClass('db shown');
+        header.css('height', '50px');
+        $(this).removeClass('db shown');
+      });
+    }
+  }
 
+  chooseLocation();
 });
 
 
