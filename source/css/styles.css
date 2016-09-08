@@ -7322,8 +7322,8 @@ button.close {
   padding: 10px 20px;
   border: none;
   outline: none;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 14px;
+  line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
   -webkit-transition: all 200ms ease-in-out;
@@ -7341,8 +7341,8 @@ button.close {
   border: 1px solid #d7d7d7;
   border-radius: 0;
   background-color: #ffffff;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   color: #000202;
   outline: none;
   vertical-align: middle;
@@ -7362,29 +7362,29 @@ button.close {
 
 .heading-1 {
   font-family: "ChunkFive Ex";
-  font-size: 4.5rem;
-  line-height: 6.25rem;
+  font-size: 72px;
+  line-height: 100px;
   color: #deb779;
 }
 
 .heading-2, .description__h2 {
   font-family: "ChunkFive Ex";
-  font-size: 3.75rem;
-  line-height: 5.125rem;
+  font-size: 60px;
+  line-height: 82px;
 }
 
 .heading-3 {
   font-family: "ChunkFive Ex";
-  font-size: 3rem;
-  line-height: 3.375rem;
+  font-size: 48px;
+  line-height: 54px;
   color: #ffffff;
   margin: 0 auto;
 }
 
 .lead {
   font-family: "ChunkFive Ex";
-  font-size: 2.25rem;
-  line-height: 2.8125rem;
+  font-size: 36px;
+  line-height: 45px;
   color: #000202;
 }
 
@@ -7450,11 +7450,11 @@ body {
 .slide-window__heading {
   display: inline-block;
   font-family: "ChunkFive Ex", serif;
-  font-size: 3rem;
-  line-height: 3.375rem;
+  font-size: 48px;
+  line-height: 54px;
   color: #deb779;
   margin-bottom: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 8px;
   border-bottom: 3px solid #600000;
 }
 .slide-window__close {
@@ -7466,7 +7466,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 50px;
   color: #ffffff;
   text-align: center;
@@ -7489,65 +7489,74 @@ body {
 }
 .main-nav__list {
   padding: 0;
-  margin-top: 2.5rem;
+  margin-top: 40px;
   list-style: none;
 }
 .main-nav__list li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
 }
 .main-nav__list li a {
   font-family: "ChunkFive Ex", serif;
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font-size: 18px;
+  line-height: 30px;
   color: #ffffff;
 }
 
 @media screen and (max-width: 1280px) {
-  .main-nav__wrap {
+  .slide-window__wrap {
     max-width: 960px;
   }
-  .main-nav__heading {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .slide-window__heading {
+    font-size: 30px;
+    line-height: 36px;
   }
+
   .main-nav__list li a {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 @media screen and (max-width: 991px) {
-  .main-nav {
+  .slide-window {
     height: auto;
-    padding: 2rem 0;
+    padding: 32px 0;
+    overflow-y: auto;
   }
-  .main-nav__wrap {
+  .slide-window__wrap {
     max-width: 750px;
+    position: relative;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    left: 0;
+    top: 0;
+    margin: 0 auto;
   }
-  .main-nav__heading {
-    margin-bottom: 2rem;
+  .slide-window__heading {
+    margin-bottom: 32px;
   }
+
   .main-nav__list {
     margin-top: 0;
   }
 }
 @media screen and (max-width: 767px) {
-  .main-nav__wrap {
+  .slide-window__wrap {
     max-width: 600px;
   }
 }
 @media screen and (max-width: 420px) {
-  .main-nav {
-    padding-top: 1rem;
+  .slide-window {
+    padding-top: 16px;
   }
-  .main-nav__heading {
-    font-size: 1.5rem;
-    line-height: 1.875rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1rem;
-    padding-bottom: 0.25rem;
+  .slide-window__heading {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 24px;
+    margin-top: 16px;
+    padding-bottom: 4px;
     border-width: 2px;
   }
-  .main-nav__close {
+  .slide-window__close {
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -7577,26 +7586,26 @@ body {
   padding: 0;
   margin-bottom: 10px;
   display: block;
-  font-size: 4.5rem;
-  line-height: 6.25rem;
+  font-size: 72px;
+  line-height: 100px;
 }
 .registration__note {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 14px;
+  line-height: 20px;
   color: #ffffff;
   font-style: italic;
   margin-top: 20px;
 }
 .registration__steps {
   font-family: "ChunkFive Ex";
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 30px;
+  line-height: 36px;
   color: #ffffff;
   margin-bottom: 25px;
 }
 .registration__p {
-  font-size: 1.375rem;
-  line-height: 1.875rem;
+  font-size: 22px;
+  line-height: 30px;
   color: #ffffff;
   margin-bottom: 10px;
 }
@@ -7617,6 +7626,76 @@ body {
   font-weight: 700;
 }
 
+@media screen and (max-width: 1366px) {
+  .registration__header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+  .registration__header .slide-window__heading {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .registration__steps {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .registration__p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .registration {
+    padding-top: 50px;
+  }
+  .registration__header .slide-window__heading {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .registration__steps {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .registration__p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .registration {
+    padding-top: 0;
+  }
+  .registration__header {
+    margin: 30px -15px 0;
+    text-align: left;
+  }
+  .registration__header .slide-window__heading {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .registration__steps {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .registration__form {
+    max-width: 320px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .registration {
+    padding-top: 0;
+  }
+  .registration__header .slide-window__heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .registration__steps {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
 .header {
   width: 100%;
   height: 50px;
@@ -7632,8 +7711,8 @@ body {
   width: 127px;
   height: 100%;
   float: left;
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font-size: 18px;
+  line-height: 30px;
   margin-right: 2px;
 }
 .header__menu-btn i {
@@ -7658,8 +7737,8 @@ body {
 }
 .header__pones-btn i {
   color: #ffffff;
-  font-size: 1.375rem;
-  line-height: 1.875rem;
+  font-size: 22px;
+  line-height: 30px;
 }
 .header__pones-btn:hover i, .header__pones-btn:active i {
   color: #600000;
@@ -7671,7 +7750,7 @@ body {
   margin-left: 2px;
 }
 .header__register-btn i {
-  font-size: 1.375rem;
+  font-size: 22px;
   line-height: 50px;
 }
 .header button {
@@ -7733,7 +7812,7 @@ body {
   line-height: 50px;
   text-align: center;
   color: #ffffff;
-  font-size: 1.375rem;
+  font-size: 22px;
   background-color: #600000;
   position: absolute;
   bottom: 0;
@@ -7828,16 +7907,16 @@ body {
 .location__toggler {
   width: 100%;
   height: 100%;
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font-size: 18px;
+  line-height: 30px;
 }
 .location__toggler i {
   margin: 0 7px;
 }
 .location__toggler i.fa-map-marker {
   color: #600000;
-  font-size: 1.375rem;
-  line-height: 1.875rem;
+  font-size: 22px;
+  line-height: 30px;
 }
 .location__drop-menu {
   padding: 0;
@@ -7845,8 +7924,8 @@ body {
 }
 .location__drop-menu > li > a {
   color: #ffffff;
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font-size: 18px;
+  line-height: 30px;
   -webkit-transition: all 200ms cubic-bezier(0.6, 0, 0.4, 1);
   transition: all 200ms cubic-bezier(0.6, 0, 0.4, 1);
 }
@@ -7857,7 +7936,7 @@ body {
 .location__address {
   height: 100%;
   padding: 0 20px;
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 50px;
 }
 
@@ -7971,8 +8050,8 @@ body {
 }
 .footer__heading {
   font-family: "ChunkFive Ex";
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 30px;
+  line-height: 36px;
   color: #ffffff;
   margin-bottom: 20px;
 }
@@ -7985,8 +8064,8 @@ body {
   margin-bottom: 10px;
 }
 .footer__list li a {
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
 }
 .footer__form {
@@ -8001,15 +8080,15 @@ body {
   height: 50px;
 }
 .footer__p {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 14px;
+  line-height: 20px;
   color: #ffffff;
   margin-bottom: 20px;
 }
 .footer__name {
   font-family: "ChunkFive Ex";
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font-size: 18px;
+  line-height: 30px;
   color: #ffffff;
   margin: 30px auto;
 }
@@ -8050,13 +8129,13 @@ body {
 }
 .first-screen__h1 {
   background-color: #000202;
-  margin-bottom: 3.75rem;
+  margin-bottom: 60px;
 }
 .first-screen__btn {
   width: 400px;
   height: 70px;
-  font-size: 1.375rem;
-  line-height: 1.875rem;
+  font-size: 22px;
+  line-height: 30px;
   border-radius: 4px;
   box-shadow: 0px 20px 10px -10px #000202;
 }
@@ -8071,8 +8150,8 @@ body {
   text-align: right;
 }
 .first-screen__slogan p {
-  font-size: 1.5rem;
-  line-height: 1.875rem;
+  font-size: 24px;
+  line-height: 30px;
   color: #ffffff;
 }
 .first-screen__alco {
@@ -8098,8 +8177,8 @@ body {
 }
 .first-screen__alco p {
   font-family: "ChunkFive Ex";
-  font-size: 1.375rem;
-  line-height: 1.875rem;
+  font-size: 22px;
+  line-height: 30px;
   color: #ffffff;
 }
 
@@ -8166,10 +8245,10 @@ body {
     padding-top: 50px;
   }
   .first-screen__h1 {
-    font-size: 3.375rem;
-    line-height: 4.6875rem;
-    margin-top: 6.25rem;
-    margin-bottom: 1.875rem;
+    font-size: 54px;
+    line-height: 75px;
+    margin-top: 100px;
+    margin-bottom: 30px;
   }
   .first-screen__slogan {
     float: right;
@@ -8177,8 +8256,8 @@ body {
     background-position: 20px top;
   }
   .first-screen__slogan p {
-    font-size: 1.125rem;
-    line-height: 1.875rem;
+    font-size: 18px;
+    line-height: 30px;
   }
   .first-screen__alco {
     max-width: 400px;
@@ -8186,16 +8265,16 @@ body {
     margin: 0 auto;
   }
   .first-screen__alco p {
-    font-size: 1.125rem;
-    line-height: 1.875rem;
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 @media screen and (max-width: 1199px) {
   .first-screen__h1 {
-    font-size: 3rem;
-    line-height: 3.375rem;
-    line-height: 4.375rem;
-    margin-top: 3.25rem;
+    font-size: 48px;
+    line-height: 54px;
+    line-height: 70px;
+    margin-top: 52px;
   }
   .first-screen__slogan {
     padding: 30px 20px 30px 60px;
@@ -8222,8 +8301,8 @@ body {
     float: left;
   }
   .first-screen__slogan p {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
   }
   .first-screen__alco {
     margin-top: 20px;
@@ -8231,8 +8310,8 @@ body {
   .first-screen__btn {
     width: 320px;
     height: 60px;
-    font-size: 1.125rem;
-    line-height: 1.875rem;
+    font-size: 18px;
+    line-height: 30px;
   }
 
   .main-logo {
@@ -8254,7 +8333,7 @@ body {
     height: 100px;
   }
   .first-screen__h1 {
-    font-size: 2rem;
+    font-size: 32px;
   }
   .first-screen__alco {
     margin-top: 30px;
@@ -8275,11 +8354,11 @@ body {
     padding-bottom: 40px;
   }
   .first-screen__h1 {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   .first-screen__btn {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     width: 100%;
     max-width: 240px;
     height: 50px;
@@ -8299,15 +8378,15 @@ body {
     padding-top: 180px;
   }
   .first-screen__h1 {
-    font-size: 1.2rem;
-    line-height: 2.5rem;
+    font-size: 20px;
+    line-height: 40px;
     margin-left: -15px;
     margin-right: -15px;
   }
 }
 .three-words {
   background-color: #000202;
-  padding: 100px 0 200px;
+  padding: 150px 0 150px;
 }
 .three-words__inner {
   max-width: 1366px;
@@ -8339,14 +8418,93 @@ body {
 }
 .three-words__p {
   font-family: "ChunkFive Ex";
-  font-size: 4.5rem;
-  line-height: 6.25rem;
+  font-size: 72px;
+  line-height: 100px;
   color: #ffffff;
   text-transform: uppercase;
   display: inline-block;
   margin: 0;
 }
 
+@media screen and (max-width: 1600px) {
+  .three-words__inner {
+    max-width: 1024px;
+  }
+  .three-words__p {
+    font-size: 54px;
+    line-height: 75px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .three-words__inner {
+    max-width: 900px;
+  }
+  .three-words__p {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .three-words {
+    padding: 100px 0;
+  }
+  .three-words__inner {
+    max-width: 750px;
+  }
+  .three-words__p {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .three-words {
+    padding: 100px 0;
+  }
+  .three-words__inner {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px 0;
+  }
+  .three-words__inner::before, .three-words__inner::after {
+    width: 90%;
+    margin-left: auto;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .three-words__p {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .three-words {
+    padding: 60px 0;
+  }
+  .three-words__inner {
+    max-width: 480px;
+  }
+  .three-words__p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .three-words {
+    padding: 60px 0;
+  }
+  .three-words__inner {
+    max-width: 100%;
+    display: block;
+  }
+  .three-words__p {
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+  .three-words__p:last-child {
+    margin-bottom: 0;
+  }
+}
 .services {
   width: 100%;
   padding-bottom: 15px;
@@ -8401,8 +8559,8 @@ body {
 }
 .services__items p {
   font-family: "ChunkFive Ex";
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font-size: 18px;
+  line-height: 30px;
   color: #ffffff;
   margin-bottom: 0;
   white-space: nowrap;
@@ -8413,8 +8571,8 @@ body {
   text-align: center;
 }
 .services__items_more p {
-  font-size: 2.25rem;
-  line-height: 2.8125rem;
+  font-size: 36px;
+  line-height: 45px;
   position: absolute;
   width: 100%;
   left: 0;
@@ -8467,8 +8625,8 @@ body {
 }
 .services__action-label {
   background-color: #600000;
-  font-size: 1.375rem;
-  line-height: 1.875rem;
+  font-size: 22px;
+  line-height: 30px;
   color: #ffffff;
   text-align: center;
   width: 250px;
@@ -8508,8 +8666,8 @@ body {
 }
 .services-carousel__heading {
   font-family: "ChunkFive Ex";
-  font-size: 3rem;
-  line-height: 3.375rem;
+  font-size: 48px;
+  line-height: 54px;
   color: #ffffff;
   margin-bottom: 10px;
   position: relative;
@@ -8522,8 +8680,8 @@ body {
 }
 .services-carousel__p {
   font-family: "PT Sans";
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font-size: 18px;
+  line-height: 30px;
   color: #ffffff;
   font-weight: 700;
   max-width: 600px;
@@ -8549,8 +8707,8 @@ body {
 }
 .services-carousel .owl-buttons div {
   display: inline-block;
-  font-size: 2.25rem;
-  line-height: 3.375rem;
+  font-size: 36px;
+  line-height: 54px;
   color: #ffffff;
   text-align: center;
   width: 50%;
@@ -8563,6 +8721,169 @@ body {
   background-color: #ffffff;
 }
 
+@media screen and (max-width: 1500px) {
+  .services__cat, .services__actions {
+    height: 580px;
+  }
+
+  .services-carousel__item {
+    height: 580px;
+  }
+  .services-carousel__content {
+    height: 320px;
+  }
+  .services-carousel__heading {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .services__cat, .services__actions {
+    height: 450px;
+  }
+  .services__items p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .services__items_more p {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .services__name {
+    padding: 10px 20px;
+  }
+  .services__action-label {
+    font-size: 20px;
+    line-height: 125px;
+    width: 200px;
+    height: 100px;
+    margin-left: -100px;
+  }
+
+  .services-carousel__item {
+    height: 450px;
+  }
+  .services-carousel__content {
+    height: auto;
+    bottom: auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .services-carousel__heading {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .services-carousel__p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .services-carousel .owl-buttons {
+    max-width: 140px;
+    margin-left: -70px;
+  }
+  .services-carousel .owl-buttons div {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .services__cat, .services__actions {
+    height: 380px;
+  }
+  .services__items:hover::before {
+    box-shadow: inset 0 0 0 5px #600000;
+  }
+  .services__items:hover .services__name {
+    bottom: 20px;
+  }
+  .services__items p::after {
+    bottom: -2px;
+  }
+  .services__items_more p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .services__name {
+    padding: 5px 10px;
+  }
+  .services__action-label {
+    font-size: 18px;
+    line-height: 110px;
+    width: 160px;
+    height: 80px;
+    margin-left: -80px;
+  }
+
+  .services-carousel__item {
+    height: 380px;
+  }
+  .services-carousel__heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .services-carousel__p {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .services__cat, .services__actions {
+    height: 450px;
+    max-width: 550px;
+    margin: 0 auto 20px;
+  }
+
+  .services-carousel__item {
+    height: 450px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .services__cat {
+    display: block;
+    height: auto;
+  }
+  .services__items {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    height: 300px;
+    margin: 0 auto 20px;
+  }
+  .services__items p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .services__items_more p {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .services__name {
+    bottom: auto;
+    top: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    padding: 10px 20px;
+  }
+  .services__actions {
+    height: 320px;
+    max-width: 380px;
+  }
+
+  .services-carousel__item {
+    height: 320px;
+  }
+  .services-carousel__heading {
+    font-size: 22px;
+    line-height: 30px;
+    background-color: #000202;
+  }
+  .services-carousel__heading span {
+    padding: 0;
+    background-color: transparent;
+  }
+}
 .description {
   background-image: url(../img/i8.jpg);
   background-repeat: repeat;
@@ -8605,7 +8926,7 @@ body {
   margin-top: 0;
 }
 .description__h2 span {
-  font-size: 4.5rem;
+  font-size: 72px;
 }
 .description__lead {
   margin-bottom: 0;
@@ -8617,8 +8938,8 @@ body {
   margin-top: 80px;
 }
 .description__p {
-  font-size: 1.375rem;
-  line-height: 1.875rem;
+  font-size: 22px;
+  line-height: 30px;
   color: #000202;
   margin-bottom: 0;
 }
@@ -8674,8 +8995,8 @@ body {
 }
 .slogan-carousel__heading {
   font-family: "ChunkFive Ex";
-  font-size: 4.5rem;
-  line-height: 6.25rem;
+  font-size: 72px;
+  line-height: 100px;
   color: #ffffff;
   width: 100%;
   position: absolute;
@@ -8690,8 +9011,8 @@ body {
   margin-left: 10px;
 }
 .slogan-carousel__description {
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font-size: 18px;
+  line-height: 30px;
   color: #ffffff;
   max-width: 80%;
   margin: 0 auto;
@@ -8723,22 +9044,22 @@ body {
 }
 .barber-school__h2 {
   font-family: "ChunkFive Ex";
-  font-size: 3.375rem;
-  line-height: 4.6875rem;
+  font-size: 54px;
+  line-height: 75px;
   color: #600000;
   margin-bottom: 30px;
 }
 .barber-school__slogan {
-  font-size: 1.375rem;
-  line-height: 1.875rem;
+  font-size: 22px;
+  line-height: 30px;
   color: #000202;
   font-weight: 700;
   margin-bottom: 20px;
 }
 .barber-school__h4 {
   font-family: "ChunkFive Ex";
-  font-size: 1.375rem;
-  line-height: 1.875rem;
+  font-size: 22px;
+  line-height: 30px;
   color: #000202;
   font-weight: 300;
   margin-bottom: 30px;
@@ -8748,8 +9069,8 @@ body {
   padding-left: 15px;
 }
 .barber-school__list li {
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   color: #000202;
   margin-bottom: 5px;
 }
@@ -8767,12 +9088,12 @@ body {
   position: relative;
 }
 .barber-school__contacts-descr {
-  font-size: 1.375rem;
-  line-height: 1.875rem;
+  font-size: 22px;
+  line-height: 30px;
 }
 .barber-school__phone {
-  font-size: 2.25rem;
-  line-height: 2.8125rem;
+  font-size: 36px;
+  line-height: 45px;
   margin-top: 10px;
 }
 
@@ -8795,28 +9116,28 @@ body {
 }
 .franchise__h2 {
   font-family: "ChunkFive Ex";
-  font-size: 3.75rem;
-  line-height: 5.125rem;
+  font-size: 60px;
+  line-height: 82px;
   position: relative;
   top: -30px;
 }
 .franchise__h3 {
   font-family: "ChunkFive Ex";
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 30px;
+  line-height: 36px;
   margin-bottom: 55px;
   margin-top: 65px;
 }
 .franchise__p {
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font-size: 18px;
+  line-height: 30px;
   margin-bottom: 55px;
   margin-left: 45px;
 }
 .franchise__contacts {
   font-family: "ChunkFive Ex";
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 30px;
+  line-height: 36px;
   margin-bottom: 0;
   padding: 20px 30px;
   width: 100%;

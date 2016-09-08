@@ -1,6 +1,6 @@
 .three-words {
   background-color: set-color('primary');
-  padding: 100px 0 200px;
+  padding: 150px 0 150px;
   &__inner {
     max-width: 1366px;
     margin: 0 auto;
@@ -33,5 +33,89 @@
     text-transform: uppercase;
     display: inline-block;
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .three-words {
+    &__inner {
+      max-width: 1024px;
+    }
+    &__p {
+      @include type-setting(7);
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .three-words {
+    &__inner {
+      max-width: 900px;
+    }
+    &__p {
+      @include type-setting(6);
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .three-words {
+    padding: 100px 0;
+    &__inner {
+      max-width: 750px;
+    }
+    &__p {
+      @include type-setting(5);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .three-words {
+    padding: 100px 0;
+    &__inner {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px 0;
+      &::before,
+      &::after {
+        width: 90%;
+        margin-left: auto;
+        transform: translateX(-50%);
+      }
+    }
+    &__p {
+      @include type-setting(4);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .three-words {
+    padding: 60px 0;
+    &__inner {
+      max-width: 480px;
+    }
+    &__p {
+      @include type-setting(3);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .three-words {
+    padding: 60px 0;
+    &__inner {
+      max-width: 100%;
+      display: block;
+    }
+    &__p {
+      display: block;
+      margin: 0 auto 30px;
+      text-align: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }

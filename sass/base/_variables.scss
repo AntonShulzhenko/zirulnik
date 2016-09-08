@@ -6,26 +6,27 @@ $zirulnik-colors: (
   'gold'       : #deb779,
   'nav-bg'     : #2b2c31,
   'light-gray' : #d7d7d7,
-  'input-color': #838282
+  'input-color': #838282,
+  'transparent': transparent
 );
 
 // Typography
-$base-font-size: 1rem;
+$base-font-size: 16px;
 $base-line-height: $base-font-size * 1.25;
 
 $type-scale: (
-  -2: 0.75rem,
-  -1: 0.875rem,
-  0: 1rem,
-  1: 1.125rem,
-  2: 1.375rem,
-  3: 1.5rem,
-  4: 1.875rem,
-  5: 2.25rem,
-  6: 3rem,
-  7: 3.375rem,
-  8: 4.5rem,
-  9: 3.75rem
+  -2: 12px,
+  -1: 14px,
+  0: 16px,
+  1: 18px,
+  2: 22px,
+  3: 24px,
+  4: 30px,
+  5: 36px,
+  6: 48px,
+  7: 54px,
+  8: 72px,
+  9: 60px
 );
 
 $line-height: (

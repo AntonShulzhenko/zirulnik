@@ -12,7 +12,7 @@
   position: relative;
   &__h1 {
     background-color: set-color('primary');
-    margin-bottom: 3.75rem;
+    margin-bottom: 60px;
   }
   &__btn {
     width: 400px;
@@ -121,8 +121,8 @@
     padding-top: 50px;
     &__h1 {
       @include type-setting(7);
-      margin-top: 6.25rem;
-      margin-bottom: 1.875rem;
+      margin-top: 100px;
+      margin-bottom: 30px;
     }
     &__slogan {
       float: right;
@@ -149,8 +149,8 @@
   .first-screen {
     &__h1 {
       @include type-setting(6);
-      line-height: 4.375rem;
-      margin-top: 3.25rem;
+      line-height: 70px;
+      margin-top: 52px;
     }
     &__slogan {
       padding: 30px 20px 30px 60px;
@@ -215,7 +215,7 @@
       height: 100px;
     }
     &__h1 {
-      font-size: 2rem;
+      font-size: 32px;
     }
     &__alco {
       margin-top: 30px;
@@ -239,7 +239,7 @@
     padding-top: 270px;
     padding-bottom: 40px;
     &__h1 {
-      font-size: 1.5rem;
+      font-size: 24px;
     }
     &__btn {
       @include type-setting(0);
@@ -263,8 +263,8 @@
   .first-screen {
     padding-top: 180px;
     &__h1 {
-      font-size: 1.2rem;
-      line-height: 2.5rem;
+      font-size: 20px;
+      line-height: 40px;
       margin-left: -15px;
       margin-right: -15px;
     }
