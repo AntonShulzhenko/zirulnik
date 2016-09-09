@@ -6,3 +6,13 @@
     margin-top: 0;
   }
 }
+
+.map-container {
+  height: 500px;
+}
+
+@media screen and (max-width: 480px) {
+  .map-container {
+    height: 300px;
+  }
+}

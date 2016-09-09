@@ -105,8 +105,8 @@
                 <p class="registration__steps">03 <br class="hidden-sm hidden-xs">Закажите<br class="hidden-sm hidden-xs"> обратный звонок</p>
 
                 <form action="" class="registration__form">
-                  <input type="tel" class="form-input" placeholder="+ 380 (**) ***-**-**">
-                  <button class="form-btn">Отправить</button>
+                  <input type="text" class="form-input registration__tel" placeholder="380*********">
+                  <button class="form-btn registration__btn">Отправить</button>
                 </form>
               </div>
             </div>
@@ -223,7 +223,7 @@
             <div class="col-sm-6">
               <div class="services__actions">
                 <div class="services__action-label">Акции</div>
-                <div class="services-carousel" id="owl-example">
+                <div class="services-carousel" id="services-carousel">
                   <div class="services-carousel__item">
                     <img src="img/i7.jpg" alt="" class="services-carousel__img">
                     <div class="services-carousel__content">
@@ -399,26 +399,23 @@
               </div>
               <div class="col-sm-8">
                 <div class="row">
-                  <div class="col-sm-4 text-center mb30">
-                    <img src="img/corona.png" alt="">
+                  <div class="col-sm-4 col-xs-6 text-center mb30">
+                    <img src="img/corona.png" class="img-responsive" alt="">
                   </div>
-                  <div class="col-sm-4 text-center mb30">
-                    <img src="img/leffe.png" alt="">
+                  <div class="col-sm-4 col-xs-6 text-center mb30">
+                    <img src="img/leffe.png" class="img-responsive" alt="">
                   </div>
-                  <div class="col-sm-4 text-center mb30">
-                    <img src="img/crew.png" alt="">
+                  <div class="col-sm-4 col-xs-6 text-center mb30">
+                    <img src="img/crew.png" class="img-responsive" alt="">
                   </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-4 text-center mb30">
-                    <img src="img/hoegaarden.png" alt="">
+                  <div class="col-sm-4 col-xs-6 text-center mb30">
+                    <img src="img/hoegaarden.png" class="img-responsive" alt="">
                   </div>
-                  <div class="col-sm-4 text-center mb30">
-                    <img src="img/lowenbrau.png" alt="">
+                  <div class="col-sm-4 col-xs-6 text-center mb30">
+                    <img src="img/lowenbrau.png" class="img-responsive" alt="">
                   </div>
-                  <div class="col-sm-4 text-center mb30">
-                    <img src="img/manly-club.png" alt="" />
+                  <div class="col-sm-4 col-xs-6 text-center mb30">
+                    <img src="img/manly-club.png" class="img-responsive" alt="" />
                   </div>
                 </div>
               </div>
@@ -516,7 +513,7 @@
       <section class="contacts">
         <h3 class="heading-3 contacts__h3 text-center">Идеальную стрижку можно получить здесь</h3>
 
-        <div class="map-container" id="map" style="height: 500px;"></div>
+        <div class="map-container" id="map"></div>
       </section>
 
       <footer class="footer">
@@ -586,7 +583,9 @@
           </div>
         </div>
 
-        <p class="footer__name text-center">2016 — Barbershop Цирюльник</p>
+        <div class="container">
+          <p class="footer__name">2016 — Barbershop Цирюльник <span>- качественные мужские стрижки</span></p>
+        </div>
       </footer>
     </main>
 
@@ -606,6 +605,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.justifiedGallery.min.js"></script>
     <script src="js/jquery.blueimp-gallery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
 
     <script src="js/main.js"></script>
 
@@ -614,35 +614,30 @@
     <script>
       $(document).ready(function() {
 
-        $("#owl-example").owlCarousel({
-          navigation : true,
-          slideSpeed : 300,
-          paginationSpeed : 400,
-          singleItem : true,
-          navigationText :	["<i class='ion-ios-arrow-thin-left'></i>","<i class='ion-ios-arrow-thin-right'></i>"],
-          pagination : false,
-          transitionStyle : "goDown"
+        var rePhone = /[0-9\+\-]/;
+        var phoneInput = $('.registration__tel');
+
+        phoneInput.mask('+380**-***-**-**', {placeholder: '+380**-***-**-**'});
+
+        phoneInput.on('blur', function() {
+          var phoneInputVal = phoneInput.val();
+          var validPhoneNumber = rePhone.test(phoneInputVal);
+          if(validPhoneNumber) {
+            alert('passed');
+          } else {
+            alert('not passed');
+          }
         });
+
 
         $("#gallery").owlCarousel({
           navigation : true,
           slideSpeed : 300,
           paginationSpeed : 400,
           singleItem : true,
-          navigationText :	["<i class='ion-ios-arrow-thin-left'></i>","<i class='ion-ios-arrow-thin-right'></i>"],
+          navigationText : ["<i class='ion-ios-arrow-thin-left'></i>","<i class='ion-ios-arrow-thin-right'></i>"],
           pagination : false,
           stagePadding: 50
-        });
-
-        $("#slogan-carousel").owlCarousel({
-          navigation : true,
-          slideSpeed : 300,
-          paginationSpeed : 400,
-          singleItem : true,
-          navigationText :	["<i class='ion-ios-arrow-thin-left'></i>","<i class='ion-ios-arrow-thin-right'></i>"],
-          pagination : false,
-          stagePadding: 50,
-          transitionStyle : "fadeUp"
         });
 
         $('.gallery__item').justifiedGallery({

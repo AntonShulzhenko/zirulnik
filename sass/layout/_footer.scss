@@ -47,6 +47,10 @@
     @include type-setting(1);
     color: set-color('white');
     margin: 30px auto;
+    span {
+      font-family: $content-font;
+      display: block;
+    }
   }
 }
 
@@ -110,10 +114,13 @@
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 480px) {
   .footer {
     &__input {
       padding: 10px;
+    }
+    &__name {
+      @include type-setting(0);
     }
   }
 }
