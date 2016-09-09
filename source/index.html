@@ -622,10 +622,8 @@
         phoneInput.on('blur', function() {
           var phoneInputVal = phoneInput.val();
           var validPhoneNumber = rePhone.test(phoneInputVal);
-          if(validPhoneNumber) {
-            alert('passed');
-          } else {
-            alert('not passed');
+          if(!validPhoneNumber) {
+            alert('Хочешь бухануть, введи правильный номер, гусяра!');
           }
         });
 
