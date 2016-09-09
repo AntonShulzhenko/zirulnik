@@ -8070,9 +8070,10 @@ body {
 }
 .footer__form {
   width: 100%;
+  overflow: hidden;
 }
 .footer__input {
-  width: 60%;
+  width: 100%;
   height: 50px;
 }
 .footer__btn {
@@ -8096,14 +8097,26 @@ body {
   font-family: "PT Sans";
   display: block;
 }
+.footer label {
+  display: block;
+  font-weight: 400;
+  float: left;
+  width: 60%;
+  margin-right: 4px;
+}
+.footer label.error-field input {
+  border-left-color: red;
+  border-left-width: 5px;
+  color: red;
+}
 
 .socials__link {
   display: inline-block;
-  width: 26px;
-  height: 26px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #600000;
-  line-height: 26px;
+  line-height: 40px;
   color: #ffffff;
   text-align: center;
   margin: 25px 10px 35px 0;
@@ -8133,9 +8146,14 @@ body {
     display: block;
     width: 100%;
     margin: 10px auto 0;
+    float: none;
+  }
+  .footer label {
+    width: 100%;
+    margin-bottom: 4px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .footer__inner {
     padding: 0 0 30px;
   }
@@ -9516,8 +9534,75 @@ body {
   height: 500px;
 }
 
+.map-info-window {
+  display: inline-block;
+  position: relative;
+  background-color: #600000;
+  background-image: url(../img/mustache.png);
+  background-repeat: no-repeat;
+  background-position: 20px 20px;
+  padding: 10px 30px 10px 80px;
+  margin-bottom: 10px;
+}
+.map-info-window__p {
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+.map-info-window__arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 15px 0 15px;
+  border-color: #600000 transparent transparent transparent;
+  position: absolute;
+  bottom: -10px;
+  left: 30px;
+}
+
+.gm-style-iw {
+  width: 450px !important;
+  height: 80px !important;
+  padding: 10px;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .footer__input {
+    width: 100%;
+  }
+  .footer label {
+    display: block;
+  }
+}
 @media screen and (max-width: 480px) {
   .map-container {
     height: 300px;
+  }
+
+  .map-info-window__p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .map-info-window {
+    background-position: 10px;
+    background-size: 30px;
+    padding: 10px 10px 10px 50px;
+  }
+  .map-info-window__p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .map-info-window {
+    background-position: 10px;
+  }
+  .map-info-window__p {
+    font-size: 14px;
+    line-height: 20px;
   }
 }

@@ -9,7 +9,8 @@ $( document ).ready(function() {
     pagination : false,
     transitionStyle : "goDown"
   });
-$("#slogan-carousel").owlCarousel({
+
+  $("#slogan-carousel").owlCarousel({
     navigation : true,
     slideSpeed : 300,
     paginationSpeed : 400,
@@ -81,16 +82,24 @@ $("#slogan-carousel").owlCarousel({
   });
 
   function chooseLocation() {
-    var header = $('.header');
-    var address = $('#address');
-    var location = $('#location .location__drop-menu');
-    var city = location.children();
-    var headerClose = $('.header__close');
+    var header          = $('.header');
+    var address         = $('#address');
+    var street          = address.children();
+    var location        = $('#location .location__drop-menu');
+    var city            = location.children();
+    var headerClose     = $('.header__close');
     var locationBtnText = $('#location .location__toggler span');
+    var streets         = ['вул. Шота Руставеллі, 33-А', '	бул. Незалежності, 2-Б'];
 
     city.on('click', function(e) {
       e.preventDefault();
       locationBtnText.text($(this).text());
+
+      if($(this).text() == 'Киев') {
+        street.text(streets[0]);
+      } else {
+        street.text(streets[1]);
+      }
     });
 
     if ($(window).width() < 768) {
@@ -127,8 +136,52 @@ var map;
       styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
   });
 
-  var marker = new google.maps.Marker({
-    position: {lat: 50.437088, lng: 30.518767},
-    map: map
+  var contentString = '<div class="map-info-window">'+
+    '<p class="map-info-window__p">Шота Руставели 33-А</p>'+
+    '<div class="map-info-window__arrow"></div>'+
+    '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  infowindow.setPosition({lat: 50.437088, lng: 30.518767});
+
+  infowindow.open(map);
+
+  // Info Window
+  $(document).ready(function() {
+    google.maps.event.addListener(infowindow, 'domready', function() {
+       // Reference to the DIV which receives the contents of the infowindow using jQuery
+       var iwOuter = $('.gm-style-iw');
+
+       /* The DIV we want to change is above the .gm-style-iw DIV.
+        * So, we use jQuery and create a iwBackground variable,
+        * and took advantage of the existing reference to .gm-style-iw for the previous DIV with .prev().
+        */
+       var iwBackground = iwOuter.prev();
+
+       // Remove the background shadow DIV
+       iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+
+       // Remove the white background DIV
+       iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+
+        // Moves the infowindow 115px to the right.
+        iwOuter.parent().parent().css({left: '140px'});
+
+        // Moves the shadow of the arrow 76px to the left margin
+        iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'display: none !important;'});
+
+        // Moves the arrow 76px to the left margin
+        iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'display: none !important;'});
+
+        var iwCloseBtn = iwOuter.next();
+
+        // Apply the desired effect to the close button
+        iwCloseBtn.css({
+          display: 'none'
+        });
+    });
   });
 }

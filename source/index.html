@@ -34,7 +34,7 @@
                   <li><a href="#">Цены на услуги</a></li>
                   <li><a href="#">Акции</a></li>
                   <li><a href="#">Мастера</a></li>
-                  <li><a href="#">Кариера в Цирюльник</a></li>
+                  <li><a href="#">Каръера в Цирюльник</a></li>
                   <li><a href="#">Франшиза</a></li>
                   <li><a href="#">Школа барберов</a></li>
                   <li><a href="#">Контакты</a></li>
@@ -55,7 +55,6 @@
                       <li><a href="#">Стрижка бороды и усов</a></li>
                       <li><a href="#">Стрижка усов</a></li>
                       <li><a href="#">Моделирование бороды</a></li>
-
                     </ul>
                   </div>
                   <div class="col-md-6">
@@ -105,7 +104,7 @@
                 <p class="registration__steps">03 <br class="hidden-sm hidden-xs">Закажите<br class="hidden-sm hidden-xs"> обратный звонок</p>
 
                 <form action="" class="registration__form">
-                  <input type="text" class="form-input registration__tel" placeholder="380*********">
+                  <input type="text" class="form-input registration__tel" placeholder="+380**-***-**-**">
                   <button class="form-btn registration__btn">Отправить</button>
                 </form>
               </div>
@@ -556,7 +555,9 @@
                 <p class="footer__heading">Будь с нами на одной волне</p>
 
                 <form action="" class="footer__form" id="footer-form">
-                  <input type="email" class="form-input footer__input" placeholder="оставь свой электронный адрес">
+                  <label class="inp-group">
+                    <input type="email" class="form-input footer__input" placeholder="оставь свой электронный адрес">
+                  </label>
                   <button class="form-btn footer__btn">Отправить</button>
                 </form>
 
@@ -606,6 +607,7 @@
     <script src="js/jquery.justifiedGallery.min.js"></script>
     <script src="js/jquery.blueimp-gallery.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/validation.js"></script>
 
     <script src="js/main.js"></script>
 
@@ -614,17 +616,24 @@
     <script>
       $(document).ready(function() {
 
-        var rePhone = /[0-9\+\-]/;
+        var rePhone = /^\+\d{5}-\d{3}-\d{2}-\d{2}$/;
+        var regForm = $('.registration__form');
         var phoneInput = $('.registration__tel');
 
         phoneInput.mask('+380**-***-**-**', {placeholder: '+380**-***-**-**'});
 
-        phoneInput.on('blur', function() {
+        regForm.submit(function(e) {
           var phoneInputVal = phoneInput.val();
           var validPhoneNumber = rePhone.test(phoneInputVal);
           if(!validPhoneNumber) {
-            alert('Хочешь бухануть, введи правильный номер, гусяра!');
+            alert('Введите корректный номер телефона');
+            e.preventDefault();
           }
+        });
+
+        $('.footer__form').submit(function(e) {
+          validation._email('.footer__input');
+          e.preventDefault();
         });
 
 
