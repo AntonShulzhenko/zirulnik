@@ -310,8 +310,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.eot?1473178915);
-  src: url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.eot?&1473178915#iefix) format("embedded-opentype"), url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.woff2?1473178916) format("woff2"), url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.woff?1473178915) format("woff"), url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.ttf?1473178915) format("truetype"), url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.svg?1473178915#glyphicons_halflingsregular) format("svg");
+  src: url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.eot?1472986470);
+  src: url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.eot?&1472986470#iefix) format("embedded-opentype"), url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.woff2?1472986470) format("woff2"), url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.woff?1472986470) format("woff"), url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.ttf?1472986470) format("truetype"), url(/source//source/fonts/bootstrap/glyphicons-halflings-regular.svg?1472986470#glyphicons_halflingsregular) format("svg");
 }
 .glyphicon {
   position: relative;
@@ -9124,10 +9124,88 @@ body {
 .gallery {
   margin: 0 -15px;
   padding: 100px 0;
+  position: relative;
+  width: 100%;
+}
+.gallery__carousel {
+  position: relative;
+  width: 100%;
+}
+.gallery__item,
+.gallery .spwiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 10%;
+  height: 450px;
+}
+.gallery__item:nth-child(1n) a:first-child,
+.gallery .spwiper-slide:nth-child(1n) a:first-child {
+  height: calc(40% - 20px);
+}
+.gallery__item:nth-child(1n) a:last-child,
+.gallery .spwiper-slide:nth-child(1n) a:last-child {
+  height: calc(60% - 20px);
+}
+.gallery__item:nth-child(2n) a:first-child,
+.gallery .spwiper-slide:nth-child(2n) a:first-child {
+  height: calc(60% - 20px);
+}
+.gallery__item:nth-child(2n) a:last-child,
+.gallery .spwiper-slide:nth-child(2n) a:last-child {
+  height: calc(40% - 20px);
+}
+.gallery__item:nth-child(3n),
+.gallery .spwiper-slide:nth-child(3n) {
+  width: 30%;
+}
+.gallery__item:nth-child(3n) a:first-child, .gallery__item:nth-child(3n) a:nth-child(2),
+.gallery .spwiper-slide:nth-child(3n) a:first-child,
+.gallery .spwiper-slide:nth-child(3n) a:nth-child(2) {
+  width: calc(50% - 20px);
+  height: calc(40% - 20px);
+}
+.gallery__item:nth-child(3n) a:nth-child(3),
+.gallery .spwiper-slide:nth-child(3n) a:nth-child(3) {
+  width: calc((100% / 3) - 20px);
+  height: calc(60% - 20px);
+}
+.gallery__item:nth-child(3n) a:last-child,
+.gallery .spwiper-slide:nth-child(3n) a:last-child {
+  width: calc((100% / 3) * 2 - 20px);
+  height: calc(60% - 20px);
+}
+.gallery__item a,
+.gallery .spwiper-slide a {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 100%;
+  position: relative;
+}
+.gallery__item a img,
+.gallery .spwiper-slide a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #gallery {
-  max-height: 430px;
+  width: 100%;
+  max-height: 450px;
   overflow: hidden;
   margin-top: 50px;
 }
