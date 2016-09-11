@@ -8,16 +8,22 @@
 @import "bootstrap";
 
 @import "compass/css3";
+
 @import "utils/functions";
 @import "utils/mixins";
+
 @import "base/variables";
 @import "base/fonts";
-@import "components/components";
 @import "base/base";
+
+@import "components/components";
+
 @import "layout/main-nav";
 @import "layout/registration";
 @import "layout/header";
 @import "layout/footer";
+@import "layout/breadcrumbs";
+
 @import "pages/main-page/first-screen";
 @import "pages/main-page/three-words";
 @import "pages/main-page/services";
@@ -28,3 +34,5 @@
 @import "pages/main-page/barber-school";
 @import "pages/main-page/franchise";
 @import "pages/main-page/contacts";
+
+@import "pages/contacts/contacts";

@@ -21,6 +21,21 @@ $( document ).ready(function() {
     transitionStyle : "fadeUp"
   });
 
+  $('.contacts-window-carousel').owlCarousel({
+    navigation : true,
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    navigationText :	["<i class='ion-ios-arrow-thin-left'></i>","<i class='ion-ios-arrow-thin-right'></i>"],
+    pagination : false,
+    items : 3,
+    addClassActive : true,
+    itemsDesktop : [1199,3],
+    itemsDesktopSmall : [980,3],
+    itemsTablet: [768,3],
+    itemsTabletSmall: false,
+    itemsMobile : [479,3]
+  });
+
   function toggleMainNav() {
     var main         = $('.main');
     var slideWindow  = $('.slide-window');

@@ -63,3 +63,16 @@
   @include type-setting(5);
   color: set-color('primary');
 }
+
+@media screen and (max-width: 1199px) {
+  .heading-1 {
+    @include type-setting(7);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading-1 {
+    @include type-setting(6);
+    margin-top: 20px;
+  }
+}
