@@ -26,7 +26,8 @@ $type-scale: (
   6: 48px,
   7: 54px,
   8: 72px,
-  9: 60px
+  9: 60px,
+  10: 96px
 );
 
 $line-height: (
@@ -40,10 +41,11 @@ $line-height: (
   6: $base-line-height * 2.7,
   7: $base-line-height * 3.75,
   8: $base-line-height * 5,
-  9: $base-line-height * 4.1
+  9: $base-line-height * 4.1,
+  10: $base-line-height * 4.8
 );
 
-$main-font:    'ChunkFive Ex';
-$content-font: 'PT Sans';
+$main-font    : 'ChunkFive Ex';
+$content-font : 'PT Sans';
 
 $max1280: max-width 1280px;

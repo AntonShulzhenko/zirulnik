@@ -1,0 +1,54 @@
+.sc {
+  position: relative;
+  padding-bottom: 90px;
+  &__h1 {
+    @include type-setting(10);
+    margin-bottom: 50px;
+    margin-top: 0;
+  }
+  &__h2 {
+    font-family: $main-font;
+    @include type-setting(5);
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  &__promo {
+    padding: 155px 0 190px;
+    background: {
+      image: url(../img/services/mh-bg.jpg);
+      repeat: no-repeat;
+      position: center;
+      size: cover;
+    }
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: {
+        color: rgba(set-color('primary'), 0.63);
+      }
+    }
+  }
+  &__lead {
+    @include type-setting(3);
+    color: set-color('white');
+  }
+  &__content {
+    color: set-color('white');
+  }
+  &__p {
+    @include type-setting(1);
+    margin-bottom: 30px;
+    &_lead {
+      @include type-setting(2);
+      font-weight: 700;
+    }
+  }
+}
