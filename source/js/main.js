@@ -36,6 +36,20 @@ $( document ).ready(function() {
     itemsMobile : [479,3]
   });
 
+  // MAIN PAGE GALLERY
+  var swiper = new Swiper('#gallery', {
+    pagination: '.swiper-pagination',
+    slidesPerView: 'auto',
+    paginationClickable: true,
+    spaceBetween: 20,
+    freeMode: true,
+    nextButton: '.gallery__arrow_next',
+    prevButton: '.gallery__arrow_prev'
+  });
+
+  var gallery = $('.gallery__item').data('gallery');
+  // /MAIN PAGE GALLERY
+
   function toggleMainNav() {
     var main         = $('.main');
     var slideWindow  = $('.slide-window');
@@ -136,8 +150,28 @@ $( document ).ready(function() {
       });
     }
   }
-
   chooseLocation();
+
+  // VALIDATION
+  $('.footer__form').submit(function(e) {
+    validation._email('.footer__input');
+    e.preventDefault();
+  });
+
+  var rePhone = /^\+\d{5}-\d{3}-\d{2}-\d{2}$/;
+  var regForm = $('.registration__form');
+  var phoneInput = $('.registration__tel');
+
+  phoneInput.mask('+380**-***-**-**', {placeholder: '+380**-***-**-**'});
+
+  regForm.submit(function(e) {
+    var phoneInputVal = phoneInput.val();
+    var validPhoneNumber = rePhone.test(phoneInputVal);
+    if(!validPhoneNumber) {
+      alert('Введите корректный номер телефона');
+      e.preventDefault();
+    }
+  });
 });
 
 

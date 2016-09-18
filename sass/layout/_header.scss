@@ -168,6 +168,24 @@
       background-color: darken(set-color('accent'), 5%);
     }
   }
+  &_nav {
+    width: auto;
+    float: none;
+    margin: 0 15px 30px;
+    display: inline-block;
+    height: auto;
+    background-color: set-color('transparent');
+    .lang__langs-container {
+      overflow: hidden;
+      height: auto;
+      padding: 0;
+    }
+    .lang__langs {
+      float: left;
+      margin-right: 2px;
+      width: 54px;
+    }
+  }
 }
 
 @keyframes fade {
@@ -334,5 +352,11 @@
         margin-left: 0;
       }
     }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .lang_nav {
+    margin-bottom: 0;
   }
 }

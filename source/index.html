@@ -25,6 +25,14 @@
     <div class="slide-window">
       <div class="slide-window__wrap">
         <nav class="main-nav">
+          <div class="lang lang_nav hidden-lg hidden-md">
+            <div class="lang__langs-container">
+              <a href="#" class="lang__langs">Ru</a>
+              <a href="#" class="lang__langs">Ua</a>
+              <a href="#" class="lang__langs">En</a>
+            </div>
+          </div>
+
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-4 col-sm-6">
@@ -96,7 +104,7 @@
               <div class="col-sm-4">
                 <p class="registration__steps">02 <br class="hidden-sm hidden-xs">На месте<br class="hidden-sm hidden-xs"> в салоне</p>
 
-                <p class="registration__p">Киев, ул. Шота Руставели 33-А</p>
+                <p class="registration__p">Киев, вул. Шота Руставели 33-А</p>
                 <p class="registration__p">Пн — Вс: 10:00-2100</p>
               </div>
 
@@ -140,7 +148,7 @@
         </div>
 
         <div class="location" id="address">
-          <p class="location__address">Шота Руставели 33-А</p>
+          <p class="location__address">вул. Шота Руставели 33-А</p>
         </div>
 
         <button class="header__register-btn form-btn">Записаться<i class="fa fa-pencil-square-o hidden-lg hidden-md" aria-hidden="true"></i></button>
@@ -184,9 +192,9 @@
 
       <section class="three-words">
         <div class="three-words__inner">
-          <p class="three-words__p">стрыжом</p>
+          <p class="three-words__p wow slideInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s">стрыжом</p>
           <p class="three-words__p">брэим</p>
-          <p class="three-words__p">налываем</p>
+          <p class="three-words__p wow slideInRight" data-wow-duration="0.5s" data-wow-delay="0.5s">налываем</p>
         </div>
       </section>
 
@@ -380,6 +388,63 @@
               </a>
               <a href="img/gallery/img-1.jpg" data-gallery>
                 <img src="img/gallery/img-1.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="gallery__item swiper-slide">
+              <a href="img/gallery/img-9.jpg" data-gallery>
+                <img src="img/gallery/img-9.jpg" alt="">
+              </a>
+              <a href="img/gallery/img-10.jpg" data-gallery>
+                <img src="img/gallery/img-10.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="gallery__item swiper-slide">
+              <a href="img/gallery/img-7.jpg" data-gallery>
+                <img src="img/gallery/img-7.jpg" alt="">
+              </a>
+              <a href="img/gallery/img-5.jpg" data-gallery>
+                <img src="img/gallery/img-5.jpg" alt="">
+              </a>
+              <a href="img/gallery/img-8.jpg" data-gallery>
+                <img src="img/gallery/img-8.jpg" alt="">
+              </a>
+              <a href="img/gallery/img-6.jpg" data-gallery>
+                <img src="img/gallery/img-6.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="gallery__item swiper-slide">
+              <a href="img/gallery/img-3.jpg" data-gallery>
+                <img src="img/gallery/img-3.jpg" alt="">
+              </a>
+              <a href="img/gallery/img-4.jpg" data-gallery>
+                <img src="img/gallery/img-4.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="gallery__item swiper-slide">
+              <a href="img/gallery/img-2.jpg" data-gallery>
+                <img src="img/gallery/img-2.jpg" alt="">
+              </a>
+              <a href="img/gallery/img-1.jpg" data-gallery>
+                <img src="img/gallery/img-1.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="gallery__item swiper-slide">
+              <a href="img/gallery/img-7.jpg" data-gallery>
+                <img src="img/gallery/img-7.jpg" alt="">
+              </a>
+              <a href="img/gallery/img-5.jpg" data-gallery>
+                <img src="img/gallery/img-5.jpg" alt="">
+              </a>
+              <a href="img/gallery/img-8.jpg" data-gallery>
+                <img src="img/gallery/img-8.jpg" alt="">
+              </a>
+              <a href="img/gallery/img-6.jpg" data-gallery>
+                <img src="img/gallery/img-6.jpg" alt="">
               </a>
             </div>
           </div>
@@ -610,46 +675,23 @@
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/validation.js"></script>
+    <script src="js/wow.min.js"></script>
 
     <script src="js/main.js"></script>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUnvQtMtuaLF9EksV6y6jCPqIZh-fiDtw&callback=initMap"></script>
 
     <script>
-      $(document).ready(function() {
-
-        var rePhone = /^\+\d{5}-\d{3}-\d{2}-\d{2}$/;
-        var regForm = $('.registration__form');
-        var phoneInput = $('.registration__tel');
-
-        phoneInput.mask('+380**-***-**-**', {placeholder: '+380**-***-**-**'});
-
-        regForm.submit(function(e) {
-          var phoneInputVal = phoneInput.val();
-          var validPhoneNumber = rePhone.test(phoneInputVal);
-          if(!validPhoneNumber) {
-            alert('Введите корректный номер телефона');
-            e.preventDefault();
-          }
-        });
-
-        $('.footer__form').submit(function(e) {
-          validation._email('.footer__input');
-          e.preventDefault();
-        });
-
-        var swiper = new Swiper('#gallery', {
-          pagination: '.swiper-pagination',
-          slidesPerView: 'auto',
-          paginationClickable: true,
-          spaceBetween: 20,
-          freeMode: true,
-          nextButton: '.gallery__arrow_next',
-          prevButton: '.gallery__arrow_prev'
-        });
-
-        var gallery = $('.gallery__item').data('gallery');
-      });
+      var wow = new WOW(
+        {
+          boxClass:     'wow',      // animated element css class (default is wow)
+          animateClass: 'animated', // animation css class (default is animated)
+          offset:       0,          // distance to the element when triggering the animation (default is 0)
+          mobile:       true,       // trigger animations on mobile devices (default is true)
+          live:         true       // act on asynchronously loaded content (default is true)
+        }
+      );
+      wow.init();
     </script>
   </body>
 </html>
