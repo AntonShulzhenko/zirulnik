@@ -19,6 +19,7 @@
       repeat: no-repeat;
       position: center;
       size: cover;
+      attachment: fixed;
     }
     position: relative;
     &::before {
@@ -41,6 +42,8 @@
     color: set-color('white');
   }
   &__content {
+    position: relative;
+    top: -40px;
     color: set-color('white');
   }
   &__p {
@@ -49,6 +52,30 @@
     &_lead {
       @include type-setting(2);
       font-weight: 700;
+    }
+    &_gold-box {
+      margin-left: 20px;
+      padding-left: 25px;
+      border-left: 3px solid set-color('gold');
+      color: set-color('gold');
+    }
+    @for $i from 1 through 10 {
+      &_#{$i} {
+        @include type-setting($i);
+      }
+    }
+  }
+  &__red-box {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 30px 30px 0;
+    padding: 50px 20px;
+    background: {
+      color: set-color('accent');
+    }
+    p {
+      margin-bottom: 0;
+      font-family: $main-font;
     }
   }
 }
