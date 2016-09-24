@@ -10169,7 +10169,129 @@ body {
   margin-bottom: 0;
   font-family: "ChunkFive Ex";
 }
+.sc__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.sc__photo img {
+  margin-bottom: 5px;
+}
 
+@media screen and (max-width: 1199px) {
+  .sc {
+    padding-bottom: 60px;
+  }
+  .sc__promo {
+    padding: 120px 0;
+  }
+  .sc__h1 {
+    font-size: 72px;
+    line-height: 75px;
+    margin-bottom: 30px;
+  }
+  .sc__lead {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .sc__p_lead {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .sc__red-box {
+    padding: 30px 20px;
+  }
+  .sc__red-box p {
+    font-size: 36px;
+    line-height: 45px;
+  }
+  .sc__photo img {
+    max-height: 300px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .sc__h1 {
+    font-size: 60px;
+  }
+  .sc__promo {
+    padding-top: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sc__h1 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+  .sc__lead {
+    font-size: 22px;
+  }
+  .sc__p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .sc__p_lead {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .sc__h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .sc__red-box {
+    float: none !important;
+    margin: 0 auto 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sc__promo {
+    padding-top: 60px;
+    padding-bottom: 140px;
+  }
+  .sc__lead, .sc__p_lead {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  .sc__photo {
+    display: block;
+    overflow: hidden;
+  }
+  .sc__photo img {
+    width: 49%;
+    max-height: 100%;
+    float: left;
+  }
+  .sc__photo img:nth-child(2n) {
+    float: right;
+  }
+  .sc__red-box p {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .sc__h1 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .sc__h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .sc__p_gold-box {
+    margin-left: 0;
+  }
+}
 .service-info {
   width: 100%;
   max-width: 450px;
@@ -10210,6 +10332,37 @@ body {
   font-weight: 700;
 }
 
+@media screen and (max-width: 991px) {
+  .service-info {
+    float: none !important;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .service-info {
+    padding: 20px 10px 70px;
+  }
+  .service-info__inner {
+    padding: 15px;
+  }
+  .service-info__p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .service-info__data {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .service-info__btn {
+    bottom: -20px;
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 90%;
+    left: 5%;
+    margin-left: 0;
+    padding: 0;
+  }
+}
 .more-services {
   width: 100%;
   max-width: 364px;
@@ -10234,6 +10387,97 @@ body {
   margin-bottom: 15px;
 }
 
+@media screen and (max-width: 991px) {
+  .more-services {
+    float: none !important;
+    margin: 0 auto 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .more-services {
+    padding: 15px 15px 10px;
+  }
+}
+.club-card {
+  padding-bottom: 180px;
+  color: #ffffff;
+}
+.club-card__h2 {
+  font-family: "ChunkFive Ex";
+  font-size: 42px;
+  line-height: 45px;
+  color: #deb779;
+}
+.club-card__item {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 330px;
+  margin-top: 105px;
+  overflow: hidden;
+}
+.club-card__desc {
+  width: 100%;
+  max-width: 410px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 15px 25px;
+  background-color: #600000;
+}
+.club-card__heading {
+  font-family: "ChunkFive Ex";
+  font-size: 24px;
+  line-height: 30px;
+  color: #deb779;
+}
+.club-card__p {
+  font-size: 14px;
+  line-height: 20px;
+}
+.club-card .sc__p_lead {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .club-card__h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .club-card {
+    padding-bottom: 100px;
+  }
+  .club-card__item {
+    height: auto;
+    min-height: 420px;
+    margin-top: 60px;
+  }
+  .club-card__desc {
+    position: relative;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .club-card__item {
+    float: none !important;
+    margin: 50px auto 0;
+    min-height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .club-card__h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .club-card__h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

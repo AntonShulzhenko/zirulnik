@@ -78,4 +78,136 @@
       font-family: $main-font;
     }
   }
+  &__photo {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    img {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .sc {
+    padding-bottom: 60px;
+    &__promo {
+      padding: 120px 0;
+    }
+    &__h1 {
+      font-size: type-scale(8);
+      line-height: line-height(7);
+      margin-bottom: 30px;
+    }
+    &__lead {
+      @include type-setting(3);
+    }
+    &__p {
+      &_lead {
+        @include type-setting(2);
+      }
+    }
+    &__red-box {
+      padding: 30px 20px;
+      p {
+        @include type-setting(5);
+      }
+    }
+    &__photo {
+      img {
+        max-height: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .sc {
+    &__h1 {
+      font-size: type-scale(9);
+    }
+    &__promo {
+      padding-top: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sc {
+    &__h1 {
+      font-size: type-scale(6);
+      line-height: line-height(6);
+    }
+    &__lead {
+      font-size: type-scale(2);
+    }
+    &__p {
+      @include type-setting(0);
+      &_lead {
+        font-size: 20px;
+        line-height: line-height(2);
+      }
+    }
+    &__h2 {
+      @include type-setting(4);
+    }
+    &__red-box {
+      float: none !important;
+      margin: 0 auto 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sc {
+    &__promo {
+      padding-top: 60px;
+      padding-bottom: 140px;
+    }
+    &__lead,
+    &__p_lead {
+      @include type-setting(1);
+      margin-bottom: 30px;
+    }
+    &__photo {
+      display: block;
+      overflow: hidden;
+      img {
+        width: 49%;
+        max-height: 100%;
+        float: left;
+        &:nth-child(2n) {
+          float: right;
+        }
+      }
+    }
+    &__red-box {
+      p {
+        @include type-setting(4);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .sc {
+    &__h1 {
+      @include type-setting(5);
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .sc {
+    &__h2 {
+      @include type-setting(3);
+    }
+    &__p {
+      &_gold-box {
+        margin-left: 0;
+      }
+    }
+  }
 }

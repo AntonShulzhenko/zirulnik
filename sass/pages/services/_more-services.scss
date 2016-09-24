@@ -22,3 +22,16 @@
     margin-bottom: 15px;
   }
 }
+
+@media screen and (max-width: 991px) {
+  .more-services {
+    float: none !important;
+    margin: 0 auto 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .more-services {
+    padding: 15px 15px 10px;
+  }
+}

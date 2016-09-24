@@ -1,0 +1,90 @@
+.club-card {
+  padding-bottom: 180px;
+  color: set-color('white');
+  &__h2 {
+    font-family: $main-font;
+    font-size: 42px;
+    line-height: line-height(5);
+    color: set-color('gold');
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 330px;
+    margin-top: 105px;
+    overflow: hidden;
+  }
+  &__desc {
+    width: 100%;
+    max-width: 410px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 15px 25px;
+    background: {
+      color: set-color('accent');
+    }
+  }
+  &__heading {
+    font-family: $main-font;
+    @include type-setting(3);
+    color: set-color('gold');
+  }
+  &__p {
+    @include type-setting(-1);
+  }
+  .sc__p_lead {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .club-card {
+    &__h2 {
+      font-size: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .club-card {
+    padding-bottom: 100px;
+    &__item {
+      height: auto;
+      min-height: 420px;
+      margin-top: 60px;
+    }
+    &__desc {
+      position: relative;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .club-card {
+    &__item {
+      float: none !important;
+      margin: 50px auto 0;
+      min-height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .club-card {
+    &__h2 {
+      @include type-setting(4);
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .club-card {
+    &__h2 {
+      @include type-setting(3);
+    }
+  }
+}
