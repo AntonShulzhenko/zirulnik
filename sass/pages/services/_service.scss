@@ -22,8 +22,7 @@
       attachment: fixed;
     }
     position: relative;
-    &::before {
-      content: "";
+    &-overlay {
       display: block;
       width: 100%;
       height: 100%;
@@ -33,10 +32,11 @@
       right: 0;
       bottom: 0;
       background: {
-        color: rgba(set-color('primary'), 0.63);
+        color: rgba(set-color('primary'), 0.60);
       }
     }
   }
+
   &__lead {
     @include type-setting(3);
     color: set-color('white');
