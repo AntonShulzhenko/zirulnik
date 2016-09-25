@@ -1,34 +1,58 @@
 $( document ).ready(function() {
-  var mainLogo = $('.load-logo');
-  // var loaderItems = $('.loader-item');
-  //
-  // loaderItems.each(function(i) {
-  //   setTimeout(function() {
-  //     loaderItems.eq(i).addClass('is-shown');
-  //     setTimeout(function() {
-  //       loaderItems.eq(i).addClass('is-hidden');
-  //     }, 1000);
-  //   }, i * 1200);
-  // });
+  var loadLogo = $('.load-logo');
+  var loaderItems = $('.loader-item');
 
-  mainLogo.animate({
-    'opacity': 1
+  setTimeout(function() {
+    loaderItems.each(function(i) {
+      setTimeout(function() {
+        loaderItems.eq(i).addClass('is-shown');
+      }, i * 1000);
+    });
+  }, 500);
+
+  setTimeout(function() {
+    loadLogo.animate({
+      'opacity': 1
+    });
+  }, 3500);
+
+  var firstScreenHeading = $('.first-screen__h1');
+  var firstScreenBtn     = $('.first-screen__btn');
+
+  firstScreenHeading.css({
+    'opacity': 0,
+    'top': '40px'
   });
 
-  Pace.on('done', function(){
-    $('.loader-overlay').css({
-      'opacity':'0',
-      'top': '-100%',
-      'bottom':'auto'
-    });
+  firstScreenBtn.css('opacity', 0);
 
-    mainLogo.animate({
-      'top': 0
-    });
+  $(window).on('load', function() {
+    setTimeout(function() {
+      $('.loader-overlay').css({
+        'opacity':'0',
+        'top': '-100%',
+        'bottom':'auto'
+      });
+
+      loadLogo.animate({
+        'top': 0
+      });
+
+      setTimeout(function() {
+        $('.loader-overlay').css({'display':'none'});
+      }, 5000);
+    }, 3600);
 
     setTimeout(function() {
-      $('.loader-overlay').css({'display':'none'});
-    }, 1000);
+      firstScreenHeading.animate({
+        'opacity': 1,
+        'top': '0px'
+      }, 700);
+    }, 4000);
+
+    setTimeout(function() {
+      firstScreenBtn.addClass('animated scale');
+    }, 4500);
   });
 
   $("#services-carousel").owlCarousel({
@@ -184,25 +208,28 @@ $( document ).ready(function() {
   chooseLocation();
 
   // VALIDATION
-  $('.footer__form').submit(function(e) {
-    validation._email('.footer__input');
-    e.preventDefault();
-  });
-
-  var rePhone = /^\+\d{5}-\d{3}-\d{2}-\d{2}$/;
-  var regForm = $('.registration__form');
-  var phoneInput = $('.registration__tel');
-
-  phoneInput.mask('+380**-***-**-**', {placeholder: '+380**-***-**-**'});
-
-  regForm.submit(function(e) {
-    var phoneInputVal = phoneInput.val();
-    var validPhoneNumber = rePhone.test(phoneInputVal);
-    if(!validPhoneNumber) {
-      alert('Введите корректный номер телефона');
+  function formValidation() {
+    $('.footer__form').submit(function(e) {
+      validation._email('.footer__input');
       e.preventDefault();
-    }
-  });
+    });
+
+    var rePhone = /^\+\d{5}-\d{3}-\d{2}-\d{2}$/;
+    var regForm = $('.registration__form');
+    var phoneInput = $('.registration__tel');
+
+    phoneInput.mask('+380**-***-**-**', {placeholder: '+380**-***-**-**'});
+
+    regForm.submit(function(e) {
+      var phoneInputVal = phoneInput.val();
+      var validPhoneNumber = rePhone.test(phoneInputVal);
+      if(!validPhoneNumber) {
+        alert('Введите корректный номер телефона');
+        e.preventDefault();
+      }
+    });
+  }
+  formValidation();
 
   function servicesPromo() {
     var screen = $('.sc__promo-overlay');
@@ -250,36 +277,25 @@ var map;
   // Info Window
   $(document).ready(function() {
     google.maps.event.addListener(infowindow, 'domready', function() {
-       // Reference to the DIV which receives the contents of the infowindow using jQuery
-       var iwOuter = $('.gm-style-iw');
+      var iwOuter = $('.gm-style-iw');
 
-       /* The DIV we want to change is above the .gm-style-iw DIV.
-        * So, we use jQuery and create a iwBackground variable,
-        * and took advantage of the existing reference to .gm-style-iw for the previous DIV with .prev().
-        */
-       var iwBackground = iwOuter.prev();
+      var iwBackground = iwOuter.prev();
 
-       // Remove the background shadow DIV
-       iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+      iwBackground.children(':nth-child(2)').css({'display' : 'none'});
 
-       // Remove the white background DIV
-       iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+      iwBackground.children(':nth-child(4)').css({'display' : 'none'});
 
-        // Moves the infowindow 115px to the right.
-        iwOuter.parent().parent().css({left: '140px'});
+      iwOuter.parent().parent().css({left: '140px'});
 
-        // Moves the shadow of the arrow 76px to the left margin
-        iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'display: none !important;'});
+      iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'display: none !important;'});
 
-        // Moves the arrow 76px to the left margin
-        iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'display: none !important;'});
+      iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'display: none !important;'});
 
-        var iwCloseBtn = iwOuter.next();
+      var iwCloseBtn = iwOuter.next();
 
-        // Apply the desired effect to the close button
-        iwCloseBtn.css({
-          display: 'none'
-        });
+      iwCloseBtn.css({
+        display: 'none'
+      });
     });
   });
 }
