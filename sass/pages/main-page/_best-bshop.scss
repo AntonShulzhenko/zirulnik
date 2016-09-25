@@ -1,0 +1,24 @@
+.best-bshop {
+  width: 250px;
+  height: 250px;
+  background: {
+    color: set-color('white');
+  }
+  padding: 30px 40px;
+  color: set-color('primary');
+  position: fixed;
+  right: -250px;
+  top: 190px;
+  z-index: 5000;
+  transition: all 500ms cubic-bezier(0.6, 0, 0.4, 1);
+  &.is-shown {
+    right: 0;
+  }
+  &__heading {
+    font-family: $main-font;
+    @include type-setting(0);
+  }
+  &__p {
+    @include type-setting(-2);
+  }
+}

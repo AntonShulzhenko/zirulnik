@@ -19,12 +19,14 @@ $( document ).ready(function() {
   var firstScreenHeading = $('.first-screen__h1');
   var firstScreenBtn     = $('.first-screen__btn');
 
-  firstScreenHeading.css({
-    'opacity': 0,
-    'top': '40px'
-  });
+  if($(window).width() > 768) {
+    firstScreenHeading.css({
+      'opacity': 0,
+      'top': '40px'
+    });
 
-  firstScreenBtn.css('opacity', 0);
+    firstScreenBtn.css('opacity', 0);
+  }
 
   $(window).on('load', function() {
     setTimeout(function() {
@@ -43,16 +45,18 @@ $( document ).ready(function() {
       }, 5000);
     }, 3600);
 
-    setTimeout(function() {
-      firstScreenHeading.animate({
-        'opacity': 1,
-        'top': '0px'
-      }, 700);
-    }, 4000);
+    if($(window).width() > 768) {
+      setTimeout(function() {
+        firstScreenHeading.animate({
+          'opacity': 1,
+          'top': '0px'
+        }, 700);
+      }, 4000);
 
-    setTimeout(function() {
-      firstScreenBtn.addClass('animated scale');
-    }, 4500);
+      setTimeout(function() {
+        firstScreenBtn.addClass('animated scale');
+      }, 4500);
+    }
   });
 
   $("#services-carousel").owlCarousel({
@@ -249,7 +253,35 @@ $( document ).ready(function() {
     });
   }
   servicesPromo();
+
+  function bbWindow() {
+    var bbWindow = $('.best-bshop');
+    var counter = 0;
+
+    function bbWindowShow() {
+      bbWindow.addClass('is-shown');
+      setTimeout(function() {
+        bbWindow.removeClass('is-shown');
+      }, 20000);
+    }
+
+    setTimeout(function() {
+      bbWindowShow();
+    }, 10000);
+  }
+  bbWindow();
 });
+
+var wow = new WOW(
+  {
+    boxClass     : 'wow',
+    animateClass : 'animated',
+    offset       : 0,
+    mobile       : false,
+    live         : true
+  }
+);
+wow.init();
 
 // MAP
 var map;

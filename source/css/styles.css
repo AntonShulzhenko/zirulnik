@@ -9950,6 +9950,31 @@ body {
     line-height: 20px;
   }
 }
+.best-bshop {
+  width: 250px;
+  height: 250px;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  color: #000202;
+  position: fixed;
+  right: -250px;
+  top: 190px;
+  z-index: 9000;
+  -webkit-transition: all 500ms cubic-bezier(0.6, 0, 0.4, 1);
+  transition: all 500ms cubic-bezier(0.6, 0, 0.4, 1);
+}
+.best-bshop.is-shown {
+  right: 0;
+}
+.best-bshop__heading {
+  font-family: "ChunkFive Ex";
+  font-size: 16px;
+  line-height: 20px;
+}
+.best-bshop__p {
+  font-size: 12px;
+}
+
 .contacts__map {
   position: relative;
 }
