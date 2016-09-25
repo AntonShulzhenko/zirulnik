@@ -265,9 +265,11 @@ $( document ).ready(function() {
       }, 20000);
     }
 
-    setTimeout(function() {
-      bbWindowShow();
-    }, 10000);
+    if($(window).width() > 768) {
+      setTimeout(function() {
+        bbWindowShow();
+      }, 10000);
+    }
   }
   bbWindow();
 });
