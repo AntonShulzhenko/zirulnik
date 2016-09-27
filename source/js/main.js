@@ -14,7 +14,7 @@ $( document ).ready(function() {
     loadLogo.animate({
       'opacity': 1
     });
-  }, 3500);
+  }, 3000);
 
   var firstScreenHeading = $('.first-screen__h1');
   var firstScreenBtn     = $('.first-screen__btn');
@@ -42,8 +42,8 @@ $( document ).ready(function() {
 
       setTimeout(function() {
         $('.loader-overlay').css({'display':'none'});
-      }, 5000);
-    }, 3600);
+      }, 4000);
+    }, 3100);
 
     if($(window).width() > 768) {
       setTimeout(function() {
@@ -51,11 +51,11 @@ $( document ).ready(function() {
           'opacity': 1,
           'top': '0px'
         }, 700);
-      }, 4000);
+      }, 3500);
 
       setTimeout(function() {
         firstScreenBtn.addClass('animated scale');
-      }, 4500);
+      }, 3500);
     }
   });
 
@@ -65,19 +65,18 @@ $( document ).ready(function() {
     paginationSpeed : 400,
     singleItem : true,
     navigationText :	["<i class='ion-ios-arrow-thin-left'></i>","<i class='ion-ios-arrow-thin-right'></i>"],
-    pagination : false,
-    transitionStyle : "goDown"
+    pagination : false
   });
 
   $("#slogan-carousel").owlCarousel({
     navigation : true,
-    slideSpeed : 300,
+    slideSpeed : 700,
     paginationSpeed : 400,
     singleItem : true,
     navigationText :	["<i class='ion-ios-arrow-thin-left'></i>","<i class='ion-ios-arrow-thin-right'></i>"],
     pagination : false,
     stagePadding: 50,
-    transitionStyle : "fadeUp"
+    transitionStyle : "fade"
   });
 
   $('.contacts-window-carousel').owlCarousel({
@@ -235,34 +234,30 @@ $( document ).ready(function() {
   }
   formValidation();
 
-  function servicesPromo() {
-    var screen = $('.sc__promo-overlay');
-    var screenContainer = $('.sc__promo').children('.container');
-    var screenHeight = screen.height();
-    var scale = 0.4 / screenHeight;
+  function scrollFadeEffect() {
+    var overlay = $('body').find('.scroll-fade-overlay');
+    var fadeContainer = $('body').find('.scroll-fade').children('.container');
+    var overlayHeight = overlay.height();
+    var scale = 0.4 / overlayHeight;
 
     $(window).on('scroll', function() {
       var wScroll = $(window).scrollTop();
       var amount = (scale * wScroll) + 0.6;
       amount = (amount <= 1) ? amount : 1;
-      screen.css('background-color', 'rgba(0,0,0,' + amount + ')');
-      screenContainer.css({
-        'opacity': 1 - (wScroll / screenHeight) * 2,
+      overlay.css('background-color', 'rgba(0,0,0,' + amount + ')');
+      fadeContainer.css({
+        'opacity': 1 - (wScroll / overlayHeight) * 2,
         'transform': 'scale(' + (1 + (wScroll / 5000)) +')'
       });
     });
   }
-  servicesPromo();
+  scrollFadeEffect();
 
   function bbWindow() {
     var bbWindow = $('.best-bshop');
-    var counter = 0;
 
     function bbWindowShow() {
       bbWindow.addClass('is-shown');
-      setTimeout(function() {
-        bbWindow.removeClass('is-shown');
-      }, 20000);
     }
 
     if($(window).width() > 768) {
@@ -278,7 +273,7 @@ var wow = new WOW(
   {
     boxClass     : 'wow',
     animateClass : 'animated',
-    offset       : 0,
+    offset       : 200,
     mobile       : false,
     live         : true
   }

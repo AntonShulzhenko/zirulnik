@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contacts</title>
+    <title>Цены</title>
 
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -12,6 +12,7 @@
     <link href="css/owl.transitions.css" rel="stylesheet">
     <link rel="stylesheet" href="css/blueimp-gallery.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/footable.core.css">
     <link href="css/styles.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -25,6 +26,14 @@
     <div class="slide-window">
       <div class="slide-window__wrap">
         <nav class="main-nav">
+          <div class="lang lang_nav hidden-lg hidden-md">
+            <div class="lang__langs-container">
+              <a href="#" class="lang__langs">Ru</a>
+              <a href="#" class="lang__langs">Ua</a>
+              <a href="#" class="lang__langs">En</a>
+            </div>
+          </div>
+
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-4 col-sm-6">
@@ -96,7 +105,7 @@
               <div class="col-sm-4">
                 <p class="registration__steps">02 <br class="hidden-sm hidden-xs">На месте<br class="hidden-sm hidden-xs"> в салоне</p>
 
-                <p class="registration__p">Киев, ул. Шота Руставели 33-А</p>
+                <p class="registration__p">Киев, вул. Шота Руставели 33-А</p>
                 <p class="registration__p">Пн — Вс: 10:00-2100</p>
               </div>
 
@@ -140,7 +149,7 @@
         </div>
 
         <div class="location" id="address">
-          <p class="location__address">Шота Руставели 33-А</p>
+          <p class="location__address">вул. Шота Руставели 33-А</p>
         </div>
 
         <button class="header__register-btn form-btn">Записаться<i class="fa fa-pencil-square-o hidden-lg hidden-md" aria-hidden="true"></i></button>
@@ -158,65 +167,131 @@
 
       <a href="#" class="main-logo"></a>
 
+      <div class="sc">
+        <section class="sc__promo scroll-fade text-center">
+          <div class="scroll-fade-overlay"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <h1 class="heading-1 sc__h1">Цены на услуги</h1>
+
+                <p class="lead sc__lead">Любой текст для описания страницы, Ростислав Опанасовыч напиши тут шонибудь и продвинь в топ.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sc__content">
+          <div class="container">
+            <p class="sc__h2 text-center">Цены на услуги в городе <span id="getCity">Киев</span></p>
+
+            <div class="price-table">
+              <table class="table">
+                <thead class="table__thead">
+                  <tr class="table__tr">
+                    <th class="table__th">Название услуги</th>
+                    <th class="table__th" data-hide="phone,tablet">Длительность</th>
+                    <th class="table__th" data-hide="phone,tablet">Цена</th>
+                  </tr>
+                </thead>
+                <tbody class="table__tbody">
+                  <tr class="table__tr">
+                    <td class="table__td">Мужская стрижка <span class="table__descr">Місце для того хто любить якість роботи, комфортні умови і догляд за бородою, вусами і зачіскою.</span></td>
+                    <td class="table__td">1 <small>час</small></td>
+                    <td class="table__td">250 <small>грн</small></td>
+                  </tr>
+
+                  <tr class="table__tr">
+                    <td class="table__td">Мужская стрижка</td>
+                    <td class="table__td">1 <small>час</small></td>
+                    <td class="table__td">250 <small>грн</small></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="services">
+        <div class="contaier-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="services__cat">
+                <a href="#" class="services__items">
+                  <img src="img/i6.jpg" alt="">
+                  <div class="services__name">
+                    <p>Мужская стрижка</p>
+                  </div>
+                </a>
+                <a href="#" class="services__items">
+                  <img src="img/i3.jpg" alt="">
+                  <div class="services__name">
+                    <p>Стрижка усов</p>
+                  </div>
+                </a>
+                <a href="#" class="services__items">
+                  <img src="img/i4.jpg" alt="">
+                  <div class="services__name">
+                    <p>Королевское бритье</p>
+                  </div>
+                </a>
+                <a href="#" class="services__items services__items_more">
+                  <p>еще 20 слуг</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="services__actions">
+                <div class="services__action-label wow slideInTop" data-wow-duration="0.75s">Акции</div>
+                <div class="services-carousel" id="services-carousel">
+                  <div class="services-carousel__item">
+                    <img src="img/i7.jpg" alt="" class="services-carousel__img">
+                    <div class="services-carousel__content">
+                      <p class="services-carousel__heading"><span>Приведи в Цирюльникъ</span><br><span>нового члена клуба</span></p>
+                      <p class="services-carousel__p">Маєш гарного друга, знайомого, або просто радий ділитись інформацією про нас? Приводь до нас і отримуй знижки!</p>
+                    </div>
+                  </div>
+                  <div class="services-carousel__item">
+                    <img src="img/i7.jpg" alt="" class="services-carousel__img">
+                    <div class="services-carousel__content">
+                      <p class="services-carousel__heading"><span>Приведи в Цирюльникъ</span><br><span>нового члена клуба</span></p>
+                      <p class="services-carousel__p">Маєш гарного друга, знайомого, або просто радий ділитись інформацією про нас? Приводь до нас і отримуй знижки!</p>
+                    </div>
+                  </div>
+                  <div class="services-carousel__item">
+                    <img src="img/i7.jpg" alt="" class="services-carousel__img">
+                    <div class="services-carousel__content">
+                      <p class="services-carousel__heading"><span>Приведи в Цирюльникъ</span><br><span>нового члена клуба</span></p>
+                      <p class="services-carousel__p">Маєш гарного друга, знайомого, або просто радий ділитись інформацією про нас? Приводь до нас і отримуй знижки!</p>
+                    </div>
+                  </div>
+                  <div class="services-carousel__item">
+                    <img src="img/i7.jpg" alt="" class="services-carousel__img">
+                    <div class="services-carousel__content">
+                      <p class="services-carousel__heading"><span>Приведи в Цирюльникъ</span><br><span>нового члена клуба</span></p>
+                      <p class="services-carousel__p">Маєш гарного друга, знайомого, або просто радий ділитись інформацією про нас? Приводь до нас і отримуй знижки!</p>
+                    </div>
+                  </div>
+                  <div class="services-carousel__item">
+                    <img src="img/i7.jpg" alt="" class="services-carousel__img">
+                    <div class="services-carousel__content">
+                      <p class="services-carousel__heading"><span>Приведи в Цирюльникъ</span><br><span>нового члена клуба</span></p>
+                      <p class="services-carousel__p">Маєш гарного друга, знайомого, або просто радий ділитись інформацією про нас? Приводь до нас і отримуй знижки!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="contacts">
-        <div class="container">
-          <div class="breadcrumbs">
-            <a href="#" class="breadcrumbs__link"><i class="fa fa-home" aria-hidden="true"></i></a>
-            <a href="#" class="breadcrumbs__link">Контакты</a>
-          </div>
+        <h3 class="heading-3 contacts__h3 text-center wow slideInBottom" data-wow-duration="0.75s">Идеальную стрижку можно получить здесь</h3>
 
-          <h1 class="heading-1 contacts__h1">Контакты</h1>
-        </div>
-
-        <div class="contacts__map">
-          <div class="map-container map-container_h860" id="map"></div>
-
-          <div class="contacts__info contacts-window">
-            <p class="contacts-window__heading">Контакная информация</p>
-
-            <div class="contacts-window__col contacts-window__col_address">
-              <p class="heading">Адрес</p>
-              <p>Киев, ул. Шота Руставели <span class="no-wrap">096-171-1-171</span></p>
-            </div>
-
-            <div class="contacts-window__col contacts-window__col_shedule">
-              <p class="heading">Режим работы</p>
-              <p>Пн — Вс: <span class="no-wrap">10:00-2100</span></p>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <p class="contacts-window__heading">Страницы в социальных сетях</p>
-
-            <div class="socials text-center">
-              <a href="#" class="socials__link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-              <a href="#" class="socials__link"><i class="fa fa-vk" aria-hidden="true"></i></a>
-              <a href="#" class="socials__link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-              <a href="#" class="socials__link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-
-            <div class="contacts-window-carousel">
-              <div>
-                <img src="img/c1.png" alt="">
-              </div>
-              <div>
-                <img src="img/c2.png" alt="">
-              </div>
-              <div>
-                <img src="img/c1.png" alt="">
-              </div>
-              <div>
-                <img src="img/c1.png" alt="">
-              </div>
-              <div>
-                <img src="img/c2.png" alt="">
-              </div>
-              <div>
-                <img src="img/c1.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="map-container" id="map"></div>
       </section>
 
       <footer class="footer">
@@ -309,9 +384,19 @@
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/validation.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/footable.js"></script>
 
     <script src="js/main.js"></script>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUnvQtMtuaLF9EksV6y6jCPqIZh-fiDtw&callback=initMap"></script>
+
+    <script type="text/javascript">
+      $('.table').footable({
+        breakpoints: {
+          phone: 480,
+          tablet: 700
+        }
+      });
+    </script>
   </body>
 </html>
