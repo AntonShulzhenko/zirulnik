@@ -23,18 +23,32 @@
     > tr {
       > th {
         padding: 25px 25px 25px 0;
-        border-bottom: 1px solid set-color('white');
+        border-bottom: 1px solid rgba(set-color('white'), 0.5);
         font-family: $main-font;
         @include type-setting(3);
+        &:first-child {
+          padding-left: 25px;
+        }
       }
     }
   }
   > tbody {
     > tr {
+      background: {
+        color: rgba(set-color('white'), 0.1);
+      }
+      &:nth-child(odd) {
+        background: {
+          color: rgba(set-color('white'), 0.15);
+        }
+      }
       > td {
-        padding: 25px 25px 25px 0;
-        border-bottom: 1px solid set-color('white');
+        padding: 15px 25px 15px 0;
+        border-bottom: 1px solid rgba(set-color('white'), 0.5);
         @include type-setting(2);
+        &:first-child {
+          padding-left: 25px;
+        }
       }
     }
   }
@@ -47,6 +61,14 @@
     position: relative;
   }
   &__td {
+    a {
+      color: set-color('white');
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+        color: set-color('white');
+      }
+    }
     small {
       font-size: 75%;
     }
@@ -59,7 +81,6 @@
     font-weight: 400;
     @include type-setting(0);
   }
-
   &.footable.breakpoint {
     > tbody {
       > tr {
@@ -67,8 +88,9 @@
           > span {
             &.footable-toggle {
               position: absolute;
-              right: 0;
-              top: 0;
+              right: 15px;
+              top: 5px;
+              padding: 0;
               &::before {
                 content: "\f218";
                 font-family: "Ionicons";
@@ -81,9 +103,6 @@
           > td {
             > span {
               &.footable-toggle {
-                position: absolute;
-                right: 0;
-                top: 0;
                 &::before {
                   content: "\f209";
                 }
@@ -116,9 +135,17 @@
     }
     > tbody {
       > tr {
+        &:nth-child(odd) {
+          background: {
+            color: rgba(set-color('white'), 0.1);
+          }
+        }
         > td {
           padding-right: 0;
           @include type-setting(1);
+          &:first-child {
+            padding-right: 25px;
+          }
         }
       }
     }
