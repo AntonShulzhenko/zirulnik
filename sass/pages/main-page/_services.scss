@@ -47,6 +47,7 @@
       text-align: center;
       p {
         @include type-setting(5);
+        white-space: normal;
         position: absolute;
         width: 100%;
         left: 0;
@@ -57,6 +58,18 @@
       &:hover {
         p {
           background-color: rgba(set-color('primary'), 0.74);
+        }
+      }
+    }
+    &_price {
+      background-color: set-color('white');
+      p {
+        color: set-color('accent');
+        padding: 0 10px;
+      }
+      &:hover {
+        p {
+          color: set-color('white');
         }
       }
     }

@@ -70,10 +70,10 @@
 
 .main-logo {
   display: block;
-  width: 135px;
-  height: 135px;
+  width: 120px;
+  height: 120px;
   background: {
-    image: url(../img/i-2.png);
+    image: url(../img/logo.svg);
     repeat: no-repeat;
     position: center;
     size: contain;
@@ -91,7 +91,7 @@
   width: 135px;
   height: 135px;
   background: {
-    image: url(../img/i-2.png);
+    image: url(../img/logo-loader.svg);
     repeat: no-repeat;
     position: center;
     size: contain;
@@ -99,7 +99,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  opacity: 0;
   transform: translate(-50%, -50%);
   transition: all 500ms cubic-bezier(0.6, 0, 0.4, 1);
   z-index: 9999;
@@ -110,7 +109,7 @@
   width: 40px;
   height: 40px;
   background: {
-    image: url(../img/logo-sm.png);
+    image: url(../img/logo-sm.svg);
     repeat: no-repeat;
     position: center;
     size: contain;
