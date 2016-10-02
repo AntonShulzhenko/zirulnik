@@ -31,7 +31,7 @@
   padding: 10px 30px 10px 80px;
   margin-bottom: 10px;
   &__p {
-    @include type-setting(4);
+    @include type-setting(3);
     color: set-color('white');
     margin-bottom: 0;
   }

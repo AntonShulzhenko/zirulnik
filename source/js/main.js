@@ -171,6 +171,8 @@
       } else {
         street.text(streets[1]);
       }
+
+      $('.map-info-window__p').html(street.text());
     });
 
     if ($(window).width() < 768) {
@@ -290,7 +292,7 @@ var map;
   });
 
   var contentString = '<div class="map-info-window">'+
-    '<p class="map-info-window__p">Шота Руставели 33-А</p>'+
+    '<p class="map-info-window__p">вул. Шота Руставелi 33-А</p>'+
     '<div class="map-info-window__arrow"></div>'+
     '</div>';
 
