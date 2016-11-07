@@ -265,6 +265,8 @@ $( document ).ready(function() {
         bbWindowShow();
       }, 10000);
     }
+
+    
   }
   bbWindow();
 });
