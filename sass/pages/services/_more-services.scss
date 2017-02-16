@@ -1,0 +1,37 @@
+.more-services {
+  width: 100%;
+  max-width: 364px;
+  border: 1px solid set-color('gold');
+  padding: 20px 40px 10px;
+  &__link {
+    display: block;
+    margin-bottom: 5px;
+    @include type-setting(1);
+    font-weight: 700;
+    color: set-color('gold');
+    text-decoration: none;
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+      color: set-color('gold');
+    }
+  }
+  .sc__h2 {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .more-services {
+    float: none !important;
+    margin: 0 auto 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .more-services {
+    padding: 15px 15px 10px;
+  }
+}

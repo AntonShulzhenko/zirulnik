@@ -1,0 +1,27 @@
+.partners {
+  background-color: set-color('primary');
+  padding: 90px 0 60px;
+  .heading-3 {
+    margin-bottom: 110px;
+  }
+  &__wrap {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .mb30 {
+    margin-bottom: 30px;
+  }
+  .ma {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .partners {
+    padding: 60px 0;
+    .heading-3 {
+      margin-bottom: 60px;
+    }
+  }
+}

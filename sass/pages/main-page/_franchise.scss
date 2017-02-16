@@ -1,0 +1,107 @@
+.franchise {
+  background-color: set-color('primary');
+  padding: 85px 0 65px;
+  color: set-color('white');
+  &__wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  &__card {
+    width: 100%;
+    height: 430px;
+    background: {
+      image: url(../img/logo.png);
+      repeat: no-repeat;
+      position: center;
+      color: #700000;
+    }
+  }
+  &__h2 {
+    font-family: $main-font;
+    @include type-setting(9);
+    position: relative;
+    top: -30px;
+  }
+  &__h3 {
+    font-family: $main-font;
+    @include type-setting(4);
+    margin-bottom: 55px;
+    margin-top: 65px;
+  }
+  &__p {
+    @include type-setting(1);
+    margin-bottom: 55px;
+    margin-left: 45px;
+  }
+  &__contacts {
+    font-family: $main-font;
+    @include type-setting(4);
+    margin-bottom: 0;
+    padding: 20px 30px;
+    width: 100%;
+    border: 1px solid set-color('white');
+  }
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1199px) {
+  .franchise {
+    padding: 60px 0;
+    &__wrap {
+      max-width: 900px;
+    }
+    &__h2 {
+      @include type-setting(6);
+    }
+    &__card {
+      height: 360px;
+    }
+    &__h3 {
+      @include type-setting(3);
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+    &__p {
+      margin-left: 30px;
+      margin-bottom: 40px;
+      @include type-setting(1);
+    }
+    &__contacts {
+      padding: 10px 20px;
+      @include type-setting(3);
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .franchise {
+    &__h2 {
+      @include type-setting(5);
+      top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .franchise {
+    padding: 60px 0;
+    &__card {
+      height: 300px;
+    }
+    &__p {
+      margin-left: 20px;
+      @include type-setting(0);
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .franchise {
+    &__contacts {
+      @include type-setting(1);
+    }
+  }
+}

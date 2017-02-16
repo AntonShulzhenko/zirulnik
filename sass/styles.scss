@@ -1,0 +1,48 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+@import "compass/css3";
+
+@import "utils/functions";
+@import "utils/mixins";
+
+@import "base/variables";
+@import "base/fonts";
+@import "base/base";
+
+@import "components/components";
+
+@import "layout/main-nav";
+@import "layout/registration";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/breadcrumbs";
+
+@import "pages/main-page/first-screen";
+@import "pages/main-page/three-words";
+@import "pages/main-page/services";
+@import "pages/main-page/description";
+@import "pages/main-page/gallery";
+@import "pages/main-page/partners";
+@import "pages/main-page/slogans";
+@import "pages/main-page/barber-school";
+@import "pages/main-page/franchise";
+@import "pages/main-page/contacts";
+@import "pages/main-page/best-bshop";
+
+@import "pages/contacts/contacts";
+@import "pages/services/service";
+@import "pages/services/men-haircut";
+@import "pages/services/service-info";
+@import "pages/services/more-services";
+@import "pages/services/club-card";
+
+@import "pages/price/price";
+
+@import "base/animation";

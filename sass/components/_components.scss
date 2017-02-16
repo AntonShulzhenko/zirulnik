@@ -1,0 +1,78 @@
+.form-btn {
+  display: inline-block;
+  background-color: set-color('accent');
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  @include type-setting(-1);
+  color: set-color('white');
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+  vertical-align: middle;
+  &:hover,
+  &:active {
+    background-color: set-color('white');
+    color: set-color('accent');
+    font-weight: 700;
+  }
+}
+
+.form-input {
+  padding: 10px 20px;
+  border: 1px solid set-color('light-gray');
+  border-radius: 0;
+  background-color: set-color('white');
+  @include type-setting(0);
+  color: set-color('primary');
+  outline: none;
+  vertical-align: middle;
+  &::-webkit-input-placeholder {
+    color: set-color('input-color');
+  }
+  &::-moz-placeholder          {
+    color: set-color('input-color');
+  }
+  &:-moz-placeholder           {
+    color: set-color('input-color');
+  }
+  &:-ms-input-placeholder      {
+    color: set-color('input-color');
+  }
+}
+
+.heading-1 {
+  font-family: $main-font;
+  @include type-setting(8);
+  color: set-color('gold');
+}
+
+.heading-2 {
+  font-family: $main-font;
+  @include type-setting(9);
+}
+
+.heading-3 {
+  font-family: $main-font;
+  @include type-setting(6);
+  color: set-color('white');
+  margin: 0 auto;
+}
+
+.lead {
+  font-family: $main-font;
+  @include type-setting(5);
+  color: set-color('primary');
+}
+
+@media screen and (max-width: 1199px) {
+  .heading-1 {
+    @include type-setting(7);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading-1 {
+    @include type-setting(6);
+    margin-top: 20px;
+  }
+}
