@@ -1,20 +1,35 @@
-$( document ).ready(function() {
-  var loadLogo = $('.load-logo');
-  var loaderItems = $('.loader-item');
+(function($) {
+  var loaderOverlay = $('.loader-overlay');
+  var loadLogo      = $('.load-logo');
 
-  setTimeout(function() {
-    loaderItems.each(function(i) {
+  Pace.on('done', function() {
+    setTimeout(function() {
+      loaderOverlay.css({
+        'opacity':'0',
+        'top': '-100%',
+        'bottom':'auto'
+      });
+
       setTimeout(function() {
-        loaderItems.eq(i).addClass('is-shown');
-      }, i * 1000);
-    });
-  }, 500);
+        loaderOverlay.css({'display':'none'});
+      }, 1000);
 
-  setTimeout(function() {
-    loadLogo.animate({
-      'opacity': 1
-    });
-  }, 3000);
+      loadLogo.animate({
+        'top': 0
+      });
+
+      if($(window).width() > 768) {
+        setTimeout(function() {
+          firstScreenHeading.animate({
+            'opacity': 1,
+            'top': '0px'
+          }, 700);
+
+          firstScreenBtn.addClass('animated scale');
+        }, 500);
+      }
+    }, 500);
+  });
 
   var firstScreenHeading = $('.first-screen__h1');
   var firstScreenBtn     = $('.first-screen__btn');
@@ -27,37 +42,6 @@ $( document ).ready(function() {
 
     firstScreenBtn.css('opacity', 0);
   }
-
-  $(window).on('load', function() {
-    setTimeout(function() {
-      $('.loader-overlay').css({
-        'opacity':'0',
-        'top': '-100%',
-        'bottom':'auto'
-      });
-
-      loadLogo.animate({
-        'top': 0
-      });
-
-      setTimeout(function() {
-        $('.loader-overlay').css({'display':'none'});
-      }, 4000);
-    }, 3100);
-
-    if($(window).width() > 768) {
-      setTimeout(function() {
-        firstScreenHeading.animate({
-          'opacity': 1,
-          'top': '0px'
-        }, 700);
-      }, 3500);
-
-      setTimeout(function() {
-        firstScreenBtn.addClass('animated scale');
-      }, 3500);
-    }
-  });
 
   $("#services-carousel").owlCarousel({
     navigation : true,
@@ -187,6 +171,8 @@ $( document ).ready(function() {
       } else {
         street.text(streets[1]);
       }
+
+      $('.map-info-window__p').html(street.text());
     });
 
     if ($(window).width() < 768) {
@@ -255,21 +241,34 @@ $( document ).ready(function() {
 
   function bbWindow() {
     var bbWindow = $('.best-bshop');
+    var bbToggler = $('.best-bshop__toggler');
 
-    function bbWindowShow() {
-      bbWindow.addClass('is-shown');
-    }
+    bbWindow.addClass('is-shown');
 
     if($(window).width() > 768) {
-      setTimeout(function() {
-        bbWindowShow();
-      }, 10000);
+      bbToggler.on('click', function() {
+        bbWindow.toggleClass('is-shown');
+      });
     }
-
-    
   }
   bbWindow();
-});
+
+  $('.scroll-to').on('click', function () {
+    var elementClick = $(this).attr('href');
+    var destination = $(elementClick).offset().top;
+    $('html:not(:animated),body:not(:animated)').animate({
+      scrollTop: destination
+    }, 1100);
+    return false;
+  });
+
+  $('.table').footable({
+    breakpoints: {
+      phone: 480,
+      tablet: 700
+    }
+  });
+})(jQuery);
 
 var wow = new WOW(
   {
@@ -293,7 +292,7 @@ var map;
   });
 
   var contentString = '<div class="map-info-window">'+
-    '<p class="map-info-window__p">Шота Руставели 33-А</p>'+
+    '<p class="map-info-window__p">вул. Шота Руставелi 33-А</p>'+
     '<div class="map-info-window__arrow"></div>'+
     '</div>';
 

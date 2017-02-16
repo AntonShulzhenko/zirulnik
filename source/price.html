@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/blueimp-gallery.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/footable.core.css">
+    <link href="css/barber-shop.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -171,6 +172,11 @@
         <section class="sc__promo scroll-fade text-center">
           <div class="scroll-fade-overlay"></div>
           <div class="container">
+            <div class="breadcrumbs text-center">
+              <a href="#" class="breadcrumbs__link"><i class="fa fa-home" aria-hidden="true"></i></a>
+              <a href="#" class="breadcrumbs__link">Цены</a>
+            </div>
+
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <h1 class="heading-1 sc__h1">Цены на услуги</h1>
@@ -183,7 +189,7 @@
 
         <section class="sc__content">
           <div class="container">
-            <p class="sc__h2 text-center">Цены на услуги в городе <span id="getCity">Киев</span></p>
+            <p class="sc__h2 text-center" id="price-start">Цены на услуги в городе <span id="getCity">Киев</span></p>
 
             <div class="price-table">
               <table class="table">
@@ -320,8 +326,8 @@
                     <p>Королевское бритье</p>
                   </div>
                 </a>
-                <a href="#" class="services__items services__items_more">
-                  <p>еще 20 слуг</p>
+                <a href="#price-start" class="services__items services__items_more services__items_price scroll-to">
+                  <p>Лучший барбершоп по версии зрителей</p>
                 </a>
               </div>
             </div>
@@ -454,9 +460,9 @@
     </main>
 
     <div class="loader-overlay">
-      <span class="loader-item">стрыжом</span>
+      <!-- <span class="loader-item">стрыжом</span>
       <span class="loader-item">брэим</span>
-      <span class="loader-item">налываем</span>
+      <span class="loader-item">налываем</span> -->
       <div class="load-logo"></div>
     </div>
 
@@ -469,18 +475,10 @@
     <script src="js/validation.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/footable.js"></script>
+    <script src="js/pace.min.js"></script>
 
     <script src="js/main.js"></script>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUnvQtMtuaLF9EksV6y6jCPqIZh-fiDtw&callback=initMap"></script>
-
-    <script type="text/javascript">
-      $('.table').footable({
-        breakpoints: {
-          phone: 480,
-          tablet: 700
-        }
-      });
-    </script>
   </body>
 </html>
